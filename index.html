@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Miro Leblanc</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="styles/main.css" />
 
     <script src="scripts/main.js" defer></script>
@@ -16,21 +20,35 @@
     <!-- Header -->
     <header class="header" data-component="Header">
         <nav class="nav">
-            <a href="" class="logo"></a>
+            <a href="" class="logo"><img src="../assets/images/logo.png" alt=""></a>
 
             <ul class="nav__list">
-                <li class="nav__item"><a href="#about" class="nav__link">À propos</a></li>
-                <li class="nav__item"><a href="#projects" class="nav__link">Projets</a></li>
-                <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
-                <li class="nav__item"><a href="https://www.linkedin.com/in/miro-leblanc/" class="nav__link" target="_blank">LinkedIn</a></li>
-                <li class="nav__item"><a href="https://youtube.com/miroleblanc" class="nav__link" target="_blank">YouTube</a></li>
-                <li class="nav__item"><a href="https://github.com/miroleblanc" class="nav__link" target="_blank">GitHub</a></li>
-                <li class="nav__item"><a href="" class="nav__link" target="_blank">CV</a></li>
+                <li class="nav__item"><a href="#about" class="nav__link">À propos <svg class="icon">
+                            <use href="#icon-about"></use>
+                        </svg></a></li>
+                <li class="nav__item"><a href="#projects" class="nav__link">Projets <svg class="icon">
+                            <use href="#icon-projets"></use>
+                        </svg></a></li>
+                <li class="nav__item"><a href="#contact" class="nav__link">Contact <svg class="icon">
+                            <use href="#icon-contact"></use>
+                        </svg></a></li>
+                <li class="nav__item nav__item__icon"><a href="https://www.linkedin.com/in/miro-leblanc/" class="nav__link" target="_blank"><svg class="icon">
+                            <use href="#icon-linkedin"></use>
+                        </svg></a></li>
+                <li class="nav__item nav__item__icon"><a href="https://youtube.com/miroleblanc" class="nav__link" target="_blank"><svg class="icon">
+                            <use href="#icon-youtube"></use>
+                        </svg></a></li>
+                <li class="nav__item nav__item__icon"><a href="https://github.com/miroleblanc" class="nav__link" target="_blank"><svg class="icon">
+                            <use href="#icon-github"></use>
+                        </svg></a></li>
+                <li class="nav__item nav__item__icon"><a href="" class="nav__link" target="_blank"><svg class="icon">
+                            <use href="#icon-cv"></use>
+                        </svg></a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="section hub">
+    <section class="hub">
         <div class="wrapper">
             <div class="content">
                 <div class="texte">
@@ -49,8 +67,10 @@
                 </div>
                 <a href="" class="bouton">VOIR MES PROJETS</a>
             </div>
+
+            <div class="divider"></div>
+
             <div class="bottom">
-                <div class="divider"></div>
                 <p class="timecode">00:00:00</p>
                 <p>SCROLLER</p>
                 <p class="rec">REC 1080p</p>
@@ -79,32 +99,34 @@
     </section>
 
     <section class="competences">
-        <h3>Compétences</h3>
-        <div class="content">
-            <div class="competence1">
-                <p>Montage vidéo</p>
-                <div class="barre"></div>
-                <p>00:95 %</p>
-            </div>
-            <div class="competence2">
-                <p>Développement web</p>
-                <div class="barre"></div>
-                <p>00:85 %</p>
-            </div>
-            <div class="competence3">
-                <p>Design graphique</p>
-                <div class="barre"></div>
-                <p>00:75 %</p>
-            </div>
-            <div class="competence4">
-                <p>Animation 2D/3D</p>
-                <div class="barre"></div>
-                <p>00:80 %</p>
-            </div>
-            <div class="competence5">
-                <p>Programmation</p>
-                <div class="barre"></div>
-                <p>00:80 %</p>
+        <div class="wrapper">
+            <h3>Compétences</h3>
+            <div class="content">
+                <div class="competence1">
+                    <p>Montage vidéo</p>
+                    <div class="barre"></div>
+                    <p>00:95 %</p>
+                </div>
+                <div class="competence2">
+                    <p>Développement web</p>
+                    <div class="barre"></div>
+                    <p>00:85 %</p>
+                </div>
+                <div class="competence3">
+                    <p>Design graphique</p>
+                    <div class="barre"></div>
+                    <p>00:75 %</p>
+                </div>
+                <div class="competence4">
+                    <p>Animation 2D/3D</p>
+                    <div class="barre"></div>
+                    <p>00:80 %</p>
+                </div>
+                <div class="competence5">
+                    <p>Programmation</p>
+                    <div class="barre"></div>
+                    <p>00:80 %</p>
+                </div>
             </div>
         </div>
     </section>
