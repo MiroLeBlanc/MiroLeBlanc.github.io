@@ -1447,10 +1447,10 @@ a.disabled {
   margin: 40px 0px;
 }
 .hub .bottom {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  justify-content: center;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
+  margin-bottom: 40px;
 }
 .hub .bottom p {
   font-family: var(--font-number);
