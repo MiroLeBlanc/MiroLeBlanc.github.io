@@ -72,7 +72,16 @@
 
             <div class="bottom">
                 <p class="timecode">00:00:00</p>
-                <p>SCROLLER</p>
+                <div class="scroller">
+                    <svg class="icon">
+                        <use href="#icon-fleche"></use>
+                    </svg>
+                    <p>SCROLLER</p>
+                    <svg class="icon">
+                        <use href="#icon-fleche"></use>
+                    </svg>
+                </div>
+
                 <p class="rec">REC 1080p</p>
             </div>
         </div>
@@ -102,30 +111,30 @@
         <div class="wrapper">
             <h3>Compétences</h3>
             <div class="content">
-                <div class="competence1">
-                    <p>Montage vidéo</p>
+                <div class="card">
+                    <p class="competence">Montage vidéo</p>
                     <div class="barre"></div>
-                    <p>00:95 %</p>
+                    <p class="pourcentage">00:95 %</p>
                 </div>
-                <div class="competence2">
-                    <p>Développement web</p>
+                <div class="card">
+                    <p class="competence">Développement web</p>
                     <div class="barre"></div>
-                    <p>00:85 %</p>
+                    <p class="pourcentage">00:85 %</p>
                 </div>
-                <div class="competence3">
-                    <p>Design graphique</p>
+                <div class="card">
+                    <p class="competence">Design graphique</p>
                     <div class="barre"></div>
-                    <p>00:75 %</p>
+                    <p class="pourcentage">00:75 %</p>
                 </div>
-                <div class="competence4">
-                    <p>Animation 2D/3D</p>
+                <div class="card">
+                    <p class="competence">Animation 2D/3D</p>
                     <div class="barre"></div>
-                    <p>00:80 %</p>
+                    <p class="pourcentage">00:80 %</p>
                 </div>
-                <div class="competence5">
-                    <p>Programmation</p>
+                <div class="card">
+                    <p class="competence">Programmation</p>
                     <div class="barre"></div>
-                    <p>00:80 %</p>
+                    <p class="pourcentage">00:80 %</p>
                 </div>
             </div>
         </div>
@@ -136,38 +145,38 @@
             <h3>Logiciels</h3>
             <div class="cards">
                 <div class="card">
-                    <img src="assets/images/logiciel1.png" alt="" />
-                    <p>Davinci Resolve</p>
+                    <img src="assets/images/davinci.png" alt="" />
+                    <p class="nom">Davinci Resolve</p>
                     <p>Montage</p>
                 </div>
                 <div class="card">
-                    <img src="assets/images/logiciel1.png" alt="" />
-                    <p>After Effects</p>
+                    <img src="assets/images/after.png" alt="" />
+                    <p class="nom">After Effects</p>
                     <p>Motion</p>
                 </div>
                 <div class="card">
-                    <img src="assets/images/logiciel1.png" alt="" />
-                    <p>Premier Pro</p>
+                    <img src="assets/images/premier.png" alt="" />
+                    <p class="nom">Premier Pro</p>
                     <p>Montage</p>
                 </div>
                 <div class="card">
-                    <img src="assets/images/logiciel1.png" alt="" />
-                    <p>Figma</p>
+                    <img src="assets/images/figma.png" alt="" />
+                    <p class="nom">Figma</p>
                     <p>Design</p>
                 </div>
                 <div class="card">
-                    <img src="assets/images/logiciel1.png" alt="" />
-                    <p>Visual Studio</p>
+                    <img src="assets/images/vscode.png" alt="" />
+                    <p class="nom">Visual Studio</p>
                     <p>Code</p>
                 </div>
                 <div class="card">
-                    <img src="assets/images/logiciel1.png" alt="" />
-                    <p>Blender</p>
+                    <img src="assets/images/blender.png" alt="" />
+                    <p class="nom">Blender</p>
                     <p>3D</p>
                 </div>
                 <div class="card">
-                    <img src="assets/images/logiciel1.png" alt="" />
-                    <p>Wordpress</p>
+                    <img src="assets/images/wordpress.png" alt="" />
+                    <p class="nom">Wordpress</p>
                     <p>Intégration</p>
                 </div>
             </div>
@@ -178,11 +187,11 @@
         <div class="wrapper">
             <h3>Qualités humaines</h3>
             <div class="content">
-                <p>Créatif</p>
-                <p>Compétitif</p>
-                <p>Persévérant</p>
-                <p>Sociable</p>
-                <p>Vendeur</p>
+                <p class="1">Créatif</p>
+                <p class="2">Compétitif</p>
+                <p class="3">Persévérant</p>
+                <p class="4">Sociable</p>
+                <p class="5">Vendeur</p>
             </div>
         </div>
     </section>
@@ -192,19 +201,19 @@
             <h3>Passions et intérêts</h3>
             <div class="cards">
                 <div class="card">
-                    <img src="assets/images/passion1.png" alt="" />
+                    <img src="assets/images/basket.png" alt="" />
                     <p>Basketball</p>
                 </div>
                 <div class="card">
-                    <img src="assets/images/passion2.png" alt="" />
+                    <img src="assets/images/snow.png" alt="" />
                     <p>Snowboard</p>
                 </div>
                 <div class="card">
-                    <img src="assets/images/passion3.png" alt="" />
+                    <img src="assets/images/show.png" alt="" />
                     <p>Concert/Musique</p>
                 </div>
                 <div class="card">
-                    <img src="assets/images/passion4.png" alt="" />
+                    <img src="assets/images/gym.png" alt="" />
                     <p>Musculation</p>
                 </div>
             </div>
@@ -214,90 +223,92 @@
     <section class="prix">
         <div class="wrapper">
             <h3>Prix et distinctions</h3>
-            <div class="swiper-cards">
+            <div class="cards">
                 <div class="card">
                     <svg class="icon">
                         <use href="#icon-prix"></use>
                     </svg>
                     <p>2025</p>
-                    <p>Gagnant de la bourses à la persévérance scolaire Desjardins</p>
+                    <h4>Gagnant de la bourses à la persévérance scolaire Desjardins</h4>
                 </div>
                 <div class="card">
                     <svg class="icon">
                         <use href="#icon-prix"></use>
                     </svg>
                     <p>2026</p>
-                    <p>Gagnant de tous les concours de vente de l'année à Oberson</p>
+                    <h4>Gagnant de tous les concours de vente de l'année à Oberson</h4>
                 </div>
             </div>
         </div>
     </section>
 
     <section class="projets">
-        <h3>Projets</h3>
-        <div class="cards">
-            <div class="card">
-                <div class="card__media"><img src="assets/images/projet1.png" alt="" /></div>
-                <div class="card__content">
-                    <div class="top">
-                        <p>Projet 01 / 05</p>
-                        <p class="rec">REC 1080p</p>
-                    </div>
-                    <div class="bottom">
-                        <h4>CHROMEVAULT</h4>
-                        <p>Intégration Wordpress d’une boutique e-commerce</p>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card__media"><img src="assets/images/projet2.png" alt="" /></div>
-                <div class="card__content">
-                    <div class="top">
-                        <p>Projet 02 / 05</p>
-                        <p class="rec">REC 1080p</p>
-                    </div>
-                    <div class="bottom">
-                        <h4>Clip musical</h4>
-                        <p>Montage vidéo et synchronisation audio</p>
+        <div class="wrapper">
+            <h3>Projets</h3>
+            <div class="cards">
+                <div class="card">
+                    <div class="card__media"><img src="assets/images/projet1.png" alt="" /></div>
+                    <div class="card__content">
+                        <div class="top">
+                            <p>Projet 01 / 05</p>
+                            <p class="rec">REC 1080p</p>
+                        </div>
+                        <div class="bottom">
+                            <h4>CHROMEVAULT</h4>
+                            <p>Intégration Wordpress d’une boutique e-commerce</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="card">
-                <div class="card__media"><img src="assets/images/projet3.png" alt="" /></div>
-                <div class="card__content">
-                    <div class="top">
-                        <p>Projet 03 / 05</p>
-                        <p class="rec">REC 1080p</p>
-                    </div>
-                    <div class="bottom">
-                        <h4>Boxhotel</h4>
-                        <p>Intégration HTML/CSS/JS d'un site web d'hôtelerie</p>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card__media"><img src="assets/images/projet4.png" alt="" /></div>
-                <div class="card__content">
-                    <div class="top">
-                        <p>Projet 04 / 05</p>
-                        <p class="rec">REC 1080p</p>
-                    </div>
-                    <div class="bottom">
-                        <h4>Virage extrême</h4>
-                        <p>Montage vidéo pour la promotion d'une émission</p>
+                <div class="card">
+                    <div class="card__media"><img src="assets/images/projet2.png" alt="" /></div>
+                    <div class="card__content">
+                        <div class="top">
+                            <p>Projet 02 / 05</p>
+                            <p class="rec">REC 1080p</p>
+                        </div>
+                        <div class="bottom">
+                            <h4>Clip musical</h4>
+                            <p>Montage vidéo et synchronisation audio</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="card">
-                <div class="card__media"><img src="assets/images/projet5.png" alt="" /></div>
-                <div class="card__content">
-                    <div class="top">
-                        <p>Projet 05 / 05</p>
-                        <p class="rec">REC 1080p</p>
+                <div class="card">
+                    <div class="card__media"><img src="assets/images/projet3.png" alt="" /></div>
+                    <div class="card__content">
+                        <div class="top">
+                            <p>Projet 03 / 05</p>
+                            <p class="rec">REC 1080p</p>
+                        </div>
+                        <div class="bottom">
+                            <h4>Boxhotel</h4>
+                            <p>Intégration HTML/CSS/JS d'un site web d'hôtelerie</p>
+                        </div>
                     </div>
-                    <div class="bottom">
-                        <h4>Demoreel</h4>
-                        <p>Montage vidéo pour la présentation d'un site web</p>
+                </div>
+                <div class="card">
+                    <div class="card__media"><img src="assets/images/projet4.png" alt="" /></div>
+                    <div class="card__content">
+                        <div class="top">
+                            <p>Projet 04 / 05</p>
+                            <p class="rec">REC 1080p</p>
+                        </div>
+                        <div class="bottom">
+                            <h4>Virage extrême</h4>
+                            <p>Montage vidéo pour la promotion d'une émission</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__media"><img src="assets/images/projet5.png" alt="" /></div>
+                    <div class="card__content">
+                        <div class="top">
+                            <p>Projet 05 / 05</p>
+                            <p class="rec">REC 1080p</p>
+                        </div>
+                        <div class="bottom">
+                            <h4>Demoreel</h4>
+                            <p>Montage vidéo pour la présentation d'un site web</p>
+                        </div>
                     </div>
                 </div>
             </div>
