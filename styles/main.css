@@ -2433,8 +2433,9 @@ button:focus-visible {
 }
 .footer .droite a {
   color: var(--color-neutre);
-  font-size: 18px;
+  font-size: 22px;
   text-decoration: none;
+  font-weight: 300;
 }
 .footer .droite a:hover {
   color: var(--color-red);
@@ -2465,5 +2466,116 @@ button:focus-visible {
 }
 .footer .courriel {
   text-decoration: underline;
+}
+
+.hero {
+  padding: 50px 0 90px;
+  background: linear-gradient(150deg, rgba(201, 67, 43, 0.35) 0%, rgba(201, 67, 43, 0.1) 22%, transparent 40%);
+}
+.hero .wrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.hero .surtitre {
+  display: inline-block;
+  margin-bottom: 30px;
+  color: var(--color-red);
+  font-weight: 700;
+  font-family: var(--font-number);
+  font-size: 20px;
+  line-height: 87%;
+  padding: 10px 15px;
+  border: solid 2px var(--color-red);
+  border-radius: 4px;
+}
+.hero h1 {
+  font-family: var(--font-primary);
+  font-weight: 700;
+  font-size: 128px;
+  line-height: 87%;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 35px;
+  margin-bottom: 40px;
+}
+.hero h1::after {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  left: 2px;
+  width: 160px;
+  height: 5px;
+  border-radius: 4px;
+  background-color: var(--color-neutre);
+}
+.hero .type,
+.hero .contexte {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  align-items: baseline;
+  margin-bottom: 12px;
+}
+.hero .type p:first-child,
+.hero .contexte p:first-child {
+  font-family: var(--font-primary);
+  font-weight: 300;
+  font-size: 26px;
+  text-transform: uppercase;
+  color: var(--color-texte-secondaire);
+}
+.hero .type p:last-child,
+.hero .contexte p:last-child {
+  font-family: var(--font-secondary);
+  font-weight: 500;
+  font-size: 26px;
+}
+.hero .intention {
+  max-width: 590px;
+  font-size: 22px;
+  line-height: 125%;
+  margin: 30px 0 40px;
+  font-weight: 400;
+}
+.hero .intention span {
+  font-weight: 700;
+}
+.hero .bouton {
+  display: inline-block;
+  font-family: var(--font-primary);
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 125%;
+  text-transform: uppercase;
+  padding: 20px 30px;
+  border-radius: 8px;
+  background-color: var(--color-red);
+  color: var(--color-bg-primary);
+  transition: background-color 0.3s ease;
+}
+.hero .bouton:hover {
+  background-color: var(--color-neutre);
+  color: var(--color-bg-primary);
+  text-decoration: none;
+}
+.hero .droite {
+  display: flex;
+  gap: 25px;
+}
+.hero .logo {
+  width: 105px;
+  height: 105px;
+  border-radius: 4px;
+  background-color: var(--color-surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero .logo img {
+  width: 75px;
+  height: 75px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 /*# sourceMappingURL=main.css.map */
