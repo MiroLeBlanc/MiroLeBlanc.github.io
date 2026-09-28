@@ -20,28 +20,28 @@
     <!-- Header -->
     <header class="header" data-component="Header">
         <nav class="nav">
-            <a href="" class="logo"><img src="../assets/images/logo.png" alt=""></a>
+            <a href="#" class="logo"><img src="assets/images/logo.png" alt="Miro Leblanc — accueil"></a>
 
             <ul class="nav__list">
-                <li class="nav__item"><a href="#about" class="nav__link">À propos <svg class="icon">
+                <li class="nav__item"><a href="#about" class="nav__link"><span class="nav__label">À propos</span><svg class="icon">
                             <use href="#icon-about"></use>
                         </svg></a></li>
-                <li class="nav__item"><a href="#projects" class="nav__link">Projets <svg class="icon">
+                <li class="nav__item"><a href="#projets" class="nav__link"><span class="nav__label">Projets</span><svg class="icon">
                             <use href="#icon-projets"></use>
                         </svg></a></li>
-                <li class="nav__item"><a href="#contact" class="nav__link">Contact <svg class="icon">
+                <li class="nav__item"><a href="#contact" class="nav__link"><span class="nav__label">Contact</span><svg class="icon">
                             <use href="#icon-contact"></use>
                         </svg></a></li>
-                <li class="nav__item nav__item__icon"><a href="https://www.linkedin.com/in/miro-leblanc/" class="nav__link" target="_blank"><svg class="icon">
+                <li class="nav__item nav__item__icon"><a href="" class="nav__link" target="_blank" rel="noopener"><span class="nav__label">LinkedIn</span><svg class="icon">
                             <use href="#icon-linkedin"></use>
                         </svg></a></li>
-                <li class="nav__item nav__item__icon"><a href="https://youtube.com/miroleblanc" class="nav__link" target="_blank"><svg class="icon">
+                <li class="nav__item nav__item__icon"><a href="" class="nav__link" target="_blank" rel="noopener"><span class="nav__label">YouTube</span><svg class="icon">
                             <use href="#icon-youtube"></use>
                         </svg></a></li>
-                <li class="nav__item nav__item__icon"><a href="https://github.com/miroleblanc" class="nav__link" target="_blank"><svg class="icon">
+                <li class="nav__item nav__item__icon"><a href="" class="nav__link" target="_blank" rel="noopener"><span class="nav__label">GitHub</span><svg class="icon">
                             <use href="#icon-github"></use>
                         </svg></a></li>
-                <li class="nav__item nav__item__icon"><a href="" class="nav__link" target="_blank"><svg class="icon">
+                <li class="nav__item nav__item__icon"><a href="#" class="nav__link" target="_blank" rel="noopener"><svg class="icon">
                             <use href="#icon-cv"></use>
                         </svg></a></li>
             </ul>
@@ -49,23 +49,20 @@
     </header>
 
     <section class="hub">
+        <!-- TODO : vidéo de fond. Ajouter ici : <video src="assets/videos/hero.mp4" autoplay muted loop playsinline></video> -->
+        <div class="hub__media"></div>
+
         <div class="wrapper">
             <div class="content">
                 <div class="texte">
-                    <h4>// Intégration multimédia — vidéo / web / motion</h4>
-                    <h1>
-                        MIRO
-                        <br />
-                        LEBLANC
-                    </h1>
+                    <p class="surtitre">// Intégration multimédia — vidéo / web / motion</p>
+                    <h1>MIRO<br />LEBLANC</h1>
                     <p>
-                        <span>Développeur web</span>
-                        et
-                        <span>monteur vidéo</span>
-                        . Je construis des sites qui tiennent debout et des séquences vidéo qui déchirent l'attention.
+                        <span>Développeur web</span> et <span>monteur vidéo</span>. Je construis des sites qui tiennent debout et des séquences vidéo qui déchirent
+                        l'attention.
                     </p>
                 </div>
-                <a href="" class="bouton">VOIR MES PROJETS</a>
+                <a href="#projets" class="bouton">Voir mes projets &gt;</a>
             </div>
 
             <div class="divider"></div>
@@ -81,28 +78,25 @@
                         <use href="#icon-fleche"></use>
                     </svg>
                 </div>
-
                 <p class="rec">REC 1080p</p>
             </div>
         </div>
     </section>
 
-    <section class="about">
+    <section class="about" id="about">
         <div class="wrapper">
-            <div class="gauche">
-                <h2>À propos</h2>
-                <img src="assets/images/about.png" alt="" />
-                <p>Still 001 f/1.8 · 50mm</p>
-            </div>
-            <div class="droite">
-                <p>
-                    <span>Développeur web</span>
-                    et
-                    <span>monteur vidéo</span>
-                    , avec un vrai bagage en vente. Je construis des choses qui fonctionnent, qui racontent quelque chose, et qui finissent par convaincre — pas
-                    juste par bien paraître.
-                </p>
-                <!-- Video -->
+            <h2>À propos</h2>
+            <div class="content">
+                <img src="assets/images/about.png" alt="Portrait de Miro Leblanc en ville, au bord de l'eau" />
+
+                <div class="droite">
+                    <p>
+                        <span>Développeur web</span> et <span>monteur vidéo</span>, avec un vrai bagage en <span>vente</span>.<br />Je construis des choses qui
+                        fonctionnent, qui racontent quelque chose, et qui finissent par convaincre — pas juste par bien paraître.
+                    </p>
+
+                    <div class="video"></div>
+                </div>
             </div>
         </div>
     </section>
@@ -111,29 +105,29 @@
         <div class="wrapper">
             <h3>Compétences</h3>
             <div class="content">
-                <div class="card">
+                <div class="card" data-scrolly>
                     <p class="competence">Montage vidéo</p>
-                    <div class="barre"></div>
+                    <div class="barre"><span class="remplissage" style="width: 95%"></span></div>
                     <p class="pourcentage">00:95 %</p>
                 </div>
-                <div class="card">
+                <div class="card" data-scrolly>
                     <p class="competence">Développement web</p>
-                    <div class="barre"></div>
+                    <div class="barre"><span class="remplissage" style="width: 85%"></span></div>
                     <p class="pourcentage">00:85 %</p>
                 </div>
-                <div class="card">
+                <div class="card" data-scrolly>
                     <p class="competence">Design graphique</p>
-                    <div class="barre"></div>
+                    <div class="barre"><span class="remplissage" style="width: 75%"></span></div>
                     <p class="pourcentage">00:75 %</p>
                 </div>
-                <div class="card">
+                <div class="card" data-scrolly>
                     <p class="competence">Animation 2D/3D</p>
-                    <div class="barre"></div>
+                    <div class="barre"><span class="remplissage" style="width: 80%"></span></div>
                     <p class="pourcentage">00:80 %</p>
                 </div>
-                <div class="card">
+                <div class="card" data-scrolly>
                     <p class="competence">Programmation</p>
-                    <div class="barre"></div>
+                    <div class="barre"><span class="remplissage" style="width: 80%"></span></div>
                     <p class="pourcentage">00:80 %</p>
                 </div>
             </div>
@@ -186,13 +180,13 @@
     <section class="qualites">
         <div class="wrapper">
             <h3>Qualités humaines</h3>
-            <div class="content">
-                <p class="1">Créatif</p>
-                <p class="2">Compétitif</p>
-                <p class="3">Persévérant</p>
-                <p class="4">Sociable</p>
-                <p class="5">Vendeur</p>
-            </div>
+            <ul class="content">
+                <li>Créatif</li>
+                <li>Compétitif</li>
+                <li>Persévérant</li>
+                <li>Sociable</li>
+                <li>Vendeur</li>
+            </ul>
         </div>
     </section>
 
@@ -229,7 +223,7 @@
                         <use href="#icon-prix"></use>
                     </svg>
                     <p>2025</p>
-                    <h4>Gagnant de la bourses à la persévérance scolaire Desjardins</h4>
+                    <h4>Gagnant de la bourse à la persévérance scolaire Desjardins</h4>
                 </div>
                 <div class="card">
                     <svg class="icon">
@@ -251,7 +245,7 @@
                         <div class="card__media"><img src="assets/images/projet1.png" alt="" /></div>
                         <div class="card__content">
                             <div class="top">
-                                <p>Projet 01 / 05</p>
+                                <p>PROJET 01 / 05</p>
                                 <p class="rec">REC 1080p</p>
                             </div>
                             <div class="bottom">
@@ -265,7 +259,7 @@
                         <div class="card__media"><img src="assets/images/projet2.png" alt="" /></div>
                         <div class="card__content">
                             <div class="top">
-                                <p>Projet 02 / 05</p>
+                                <p>PROJET 02 / 05</p>
                                 <p class="rec">REC 1080p</p>
                             </div>
                             <div class="bottom">
@@ -279,7 +273,7 @@
                         <div class="card__media"><img src="assets/images/projet3.png" alt="" /></div>
                         <div class="card__content">
                             <div class="top">
-                                <p>Projet 03 / 05</p>
+                                <p>PROJET 03 / 05</p>
                                 <p class="rec">REC 1080p</p>
                             </div>
                             <div class="bottom">
@@ -293,7 +287,7 @@
                         <div class="card__media"><img src="assets/images/projet4.png" alt="" /></div>
                         <div class="card__content">
                             <div class="top">
-                                <p>Projet 04 / 05</p>
+                                <p>PROJET 04 / 05</p>
                                 <p class="rec">REC 1080p</p>
                             </div>
                             <div class="bottom">
@@ -307,7 +301,7 @@
                         <div class="card__media"><img src="assets/images/projet5.png" alt="" /></div>
                         <div class="card__content">
                             <div class="top">
-                                <p>Projet 05 / 05</p>
+                                <p>PROJET 05 / 05</p>
                                 <p class="rec">REC 1080p</p>
                             </div>
                             <div class="bottom">
@@ -334,7 +328,7 @@
                         </div>
                         <div class="projets__infos">
                             <p class="projets__timecode js-timecode">00:00:00</p>
-                            <p class="projets__label js-label">Projet 01 / 05 — ChromeVault</p>
+                            <p class="projets__label js-label">PROJET 01 / 05 — CHROMEVAULT</p>
                             <p class="rec">REC 1080p</p>
                         </div>
                     </div>
@@ -344,49 +338,59 @@
     </section>
 
     <section class="stage">
+        <div class="clap"></div>
         <div class="wrapper">
-            <p>
-                À la recherche d’un stage en
-                <br />
-                <span>développement web</span>
-                ou en
-                <span>montage vidéo</span>
-            </p>
+            <p>À la recherche d’un stage en<br /><span>développement web</span> ou en <span>montage vidéo</span></p>
         </div>
+        <div class="clap"></div>
     </section>
-    <!-- Footer -->
-    <footer class="footer">
+
+    <!-- Footer / Contact -->
+    <footer class="footer" id="contact">
         <div class="wrapper">
             <div class="gauche">
-                <h2>Prêt à <br>créer</h2>
-                <a href="" class="bouton">Télécharger le CV</a>
-                <a href="" class="bouton">M'écrire</a>
-            </div>
-            <div class="droite">
-                <p>miroleblanc@gmail.com</p>
-                <div class="divider"></div>
-                <p>579-421-2825</p>
-                <div class="divider"></div>
-                <div class="reseaux">
-                    <svg class="icon">
-                        <use href="#icon-github"></use>
-                    </svg>
-                    <svg class="icon">
-                        <use href="#icon-youtube"></use>
-                    </svg>
-                    <svg class="icon">
-                        <use href="#icon-linkedin"></use>
-                    </svg>
-                </div>
-                <div class="divider"></div>
-                <div class="mentionia">
-                    <svg class="icon">
-                        <use href="#icon-ia"></use>
-                    </svg>
-                    <p>Déclaration IA</p>
+                <h2>Prêt à<br />créer</h2>
+                <div class="boutons">
+                    <!-- TODO : lien vers le CV (PDF) -->
+                    <a href="#" class="bouton bouton--plein">Télécharger le CV</a>
+                    <a href="mailto:miroleblanc@gmail.com" class="bouton bouton--sombre">M'écrire</a>
                 </div>
             </div>
 
+            <ul class="droite">
+                <li>
+                    <a href="mailto:miroleblanc@gmail.com" class="courriel">miroleblanc@gmail.com</a>
+                </li>
+                <li>
+                    <a href="tel:+15794212825">579-421-2825</a>
+                </li>
+                <li class="reseaux">
+                    <a href="" target="_blank" rel="noopener" aria-label="GitHub">
+                        <svg class="icon">
+                            <use href="#icon-github"></use>
+                        </svg>
+                    </a>
+                    <a href="" target="_blank" rel="noopener" aria-label="YouTube">
+                        <svg class="icon">
+                            <use href="#icon-youtube"></use>
+                        </svg>
+                    </a>
+                    <a href="" target="_blank" rel="noopener" aria-label="LinkedIn">
+                        <svg class="icon">
+                            <use href="#icon-linkedin"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <!-- TODO : lien vers la page Déclaration IA -->
+                    <a href="#" class="mentionia">
+                        <svg class="icon">
+                            <use href="#icon-ia"></use>
+                        </svg>
+                        Déclaration IA
+                    </a>
+                </li>
+            </ul>
         </div>
     </footer>
 
