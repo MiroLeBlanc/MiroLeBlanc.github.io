@@ -2124,6 +2124,7 @@ button:focus-visible {
 
 .projets {
   margin-bottom: 135px;
+  background-color: var(--color-bg-fonce);
 }
 .projets h3 {
   font-family: var(--font-primary);
@@ -2233,7 +2234,7 @@ button:focus-visible {
     height: 100vh;
     overflow: hidden;
     padding-top: 40px;
-    background: radial-gradient(ellipse 50% 45% at 50% 55%, rgba(45, 111, 242, 0.4) 0%, transparent 70%);
+    background: radial-gradient(ellipse 50% 45% at 50% 55%, rgba(201, 67, 43, 0.5) 0%, transparent 70%);
   }
   .has-js .projets .projets__scene {
     display: block;
@@ -2270,36 +2271,6 @@ button:focus-visible {
   .has-js .projets .projets__hud .wrapper {
     position: relative;
     height: 100%;
-  }
-  .has-js .projets .projets__corner {
-    position: absolute;
-    width: 28px;
-    height: 28px;
-    border: 0 solid var(--color-neutre);
-  }
-  .has-js .projets .projets__corner--tl {
-    top: 150px;
-    left: var(--wrapper-padding);
-    border-top-width: 2px;
-    border-left-width: 2px;
-  }
-  .has-js .projets .projets__corner--tr {
-    top: 150px;
-    right: var(--wrapper-padding);
-    border-top-width: 2px;
-    border-right-width: 2px;
-  }
-  .has-js .projets .projets__corner--bl {
-    bottom: 130px;
-    left: var(--wrapper-padding);
-    border-bottom-width: 2px;
-    border-left-width: 2px;
-  }
-  .has-js .projets .projets__corner--br {
-    bottom: 130px;
-    right: var(--wrapper-padding);
-    border-bottom-width: 2px;
-    border-right-width: 2px;
   }
   .has-js .projets .projets__bar {
     position: absolute;
@@ -2338,10 +2309,6 @@ button:focus-visible {
     color: var(--color-texte-secondaire);
   }
 }
-.stage .clap {
-  height: 34px;
-  background: repeating-linear-gradient(-60deg, transparent 0px, transparent 22px, var(--color-neutre) 22px, var(--color-neutre) 62px);
-}
 .stage .wrapper {
   padding-top: 70px;
   padding-bottom: 70px;
@@ -2354,6 +2321,11 @@ button:focus-visible {
 }
 .stage p span {
   color: var(--color-red);
+}
+
+.clap {
+  height: 34px;
+  background: repeating-linear-gradient(-60deg, transparent 0px, transparent 22px, var(--color-neutre) 22px, var(--color-neutre) 62px);
 }
 
 .footer {
@@ -2577,5 +2549,173 @@ button:focus-visible {
   height: 75px;
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+.infos {
+  border-top: 2px solid var(--color-surface);
+  margin-top: 85px;
+}
+.infos h2 {
+  font-family: var(--font-primary);
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 125%;
+  text-transform: uppercase;
+  padding: 40px 0;
+  border-right: 2px solid var(--color-surface);
+  transition: border-color 0.3s ease;
+}
+.infos .contexte,
+.infos .credits {
+  border-bottom: 2px solid var(--color-surface);
+  transition: background-color 0.3s ease;
+}
+.infos .contexte .wrapper,
+.infos .credits .wrapper {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  align-items: center;
+}
+.infos .contexte:hover,
+.infos .credits:hover {
+  background-color: var(--color-red);
+}
+.infos .contexte:hover h2,
+.infos .credits:hover h2 {
+  border-color: rgba(14, 11, 10, 0.3);
+}
+.infos h2 {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+}
+.infos p {
+  padding-left: 50px;
+  font-size: 22px;
+  line-height: 125%;
+}
+.infos p span {
+  font-weight: 700;
+}
+
+.processus h2 {
+  font-family: var(--font-primary);
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 125%;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 25px;
+  margin-bottom: 85px;
+  margin-top: 85px;
+}
+.processus h2::after {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  left: 2px;
+  width: 160px;
+  height: 5px;
+  border-radius: 4px;
+  background-color: var(--color-neutre);
+}
+.processus .plan1,
+.processus .plan2,
+.processus .plan3,
+.processus .plan4,
+.processus .plan5 {
+  background-color: var(--color-surface);
+  padding: 40px;
+}
+.processus .media {
+  margin-top: 30px;
+}
+.processus .plan1 .media {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  justify-content: center;
+  align-items: center;
+}
+.processus .plan1 .couleur {
+  width: 78px;
+  height: 78px;
+  border-radius: 100%;
+}
+.processus .plan1 .couleur1 {
+  background-color: #050505;
+}
+.processus .plan1 .couleur2 {
+  background-color: #f3f3f1;
+}
+.processus .plan1 .couleur3 {
+  background-color: #141414;
+}
+.processus .plan1 .couleur4 {
+  background-color: #9a9a9a;
+}
+.processus .plan1 .couleur5 {
+  background-color: #c8b99a;
+}
+.processus .plan1 .couleur6 {
+  background-color: #525252;
+}
+.processus .plan {
+  display: inline-block;
+  margin-bottom: 30px;
+  color: var(--color-red);
+  font-weight: 700;
+  font-family: var(--font-number);
+  font-size: 20px;
+  line-height: 87%;
+  padding: 10px 15px;
+  border: solid 2px var(--color-red);
+  border-radius: 4px;
+}
+.processus .plan4 .media {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  justify-content: center;
+  align-items: start;
+  gap: 100px;
+}
+.processus .plan5 .media {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  justify-content: center;
+  align-items: end;
+  gap: 100px;
+}
+.processus h3 {
+  font-family: var(--font-primary);
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 125%;
+  padding-bottom: 20px;
+}
+.processus .bouton {
+  display: inline-block;
+  font-family: var(--font-primary);
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 125%;
+  color: var(--color-red);
+  text-transform: uppercase;
+  padding: 20px 40px;
+  border: solid 2px var(--color-red);
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+.processus .bouton:hover {
+  background-color: var(--color-red);
+  color: var(--color-bg-primary);
+  text-decoration: none;
+}
+.processus p {
+  font-family: var(--font-secondary);
+  font-weight: 400;
+  font-size: 22px;
+}
+.processus p span {
+  font-weight: 700;
 }
 /*# sourceMappingURL=main.css.map */
