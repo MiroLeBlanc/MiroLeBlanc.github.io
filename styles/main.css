@@ -2598,6 +2598,9 @@ button:focus-visible {
   font-weight: 700;
 }
 
+.processus .wrapper {
+  padding-right: max(var(--wrapper-padding), 105px);
+}
 .processus h2 {
   font-family: var(--font-primary);
   font-weight: 700;
@@ -2619,88 +2622,141 @@ button:focus-visible {
   border-radius: 4px;
   background-color: var(--color-neutre);
 }
+.processus .plans {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  margin-bottom: 135px;
+  padding: 30px 0;
+  height: 100vh;
+  overflow: hidden;
+}
 .processus .plan1,
 .processus .plan2,
 .processus .plan3,
 .processus .plan4,
 .processus .plan5 {
-  background-color: var(--color-surface);
-  padding: 40px;
+  flex: 0 0 100%;
+  background: repeating-linear-gradient(to bottom, rgba(242, 233, 221, 0.03) 0px, rgba(242, 233, 221, 0.03) 1px, transparent 1px, transparent 4px), radial-gradient(ellipse 55% 80% at 90% 0%, rgba(201, 67, 43, 0.16) 0%, transparent 70%), linear-gradient(to bottom, #1a1512 0%, #120e0c 100%);
+  border: 1px solid rgba(242, 233, 221, 0.1);
+  padding: clamp(30px, 6vh, 60px);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 .processus .media {
-  margin-top: 30px;
+  margin-top: clamp(20px, 4vh, 40px);
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+}
+.processus .media img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  border: 1px solid rgba(242, 233, 221, 0.12);
+  border-radius: 4px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
 }
 .processus .plan1 .media {
   display: grid;
   grid-template-columns: 2fr 1fr;
+  grid-template-rows: minmax(0, 1fr);
   justify-content: center;
   align-items: center;
+  gap: 60px;
+}
+.processus .plan1 .palette {
+  --taille: min(300px, 32vh);
+  position: relative;
+  width: var(--taille);
+  height: var(--taille);
+  justify-self: center;
+  animation: palette-tourne 24s linear infinite;
 }
 .processus .plan1 .couleur {
-  width: 78px;
-  height: 78px;
+  width: calc(var(--taille) * 0.26);
+  height: calc(var(--taille) * 0.26);
   border-radius: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: calc(var(--taille) * -0.13) 0 0 calc(var(--taille) * -0.13);
+  box-shadow: 0 0 18px rgba(201, 67, 43, 0.45);
 }
 .processus .plan1 .couleur1 {
   background-color: #050505;
+  transform: rotate(0deg) translateY(calc(var(--taille) * -0.47));
 }
 .processus .plan1 .couleur2 {
   background-color: #f3f3f1;
+  transform: rotate(60deg) translateY(calc(var(--taille) * -0.47));
 }
 .processus .plan1 .couleur3 {
   background-color: #141414;
+  transform: rotate(120deg) translateY(calc(var(--taille) * -0.47));
 }
 .processus .plan1 .couleur4 {
   background-color: #9a9a9a;
+  transform: rotate(180deg) translateY(calc(var(--taille) * -0.47));
 }
 .processus .plan1 .couleur5 {
   background-color: #c8b99a;
+  transform: rotate(240deg) translateY(calc(var(--taille) * -0.47));
 }
 .processus .plan1 .couleur6 {
   background-color: #525252;
+  transform: rotate(300deg) translateY(calc(var(--taille) * -0.47));
 }
 .processus .plan {
   display: inline-block;
-  margin-bottom: 30px;
+  margin-bottom: clamp(12px, 3.3vh, 30px);
   color: var(--color-red);
   font-weight: 700;
   font-family: var(--font-number);
-  font-size: 20px;
+  font-size: clamp(14px, 2.2vh, 20px);
   line-height: 87%;
-  padding: 10px 15px;
+  padding: clamp(6px, 1.1vh, 10px) clamp(10px, 1.7vh, 15px);
   border: solid 2px var(--color-red);
   border-radius: 4px;
 }
 .processus .plan4 .media {
   display: grid;
   grid-template-columns: 2fr 1fr;
+  grid-template-rows: minmax(0, 1fr);
   justify-content: center;
   align-items: start;
-  gap: 100px;
+  gap: 60px;
 }
 .processus .plan5 .media {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  justify-content: center;
-  align-items: end;
-  gap: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: clamp(20px, 4vh, 40px);
+}
+.processus .plan5 img {
+  min-width: 0;
+}
+.processus .plan5 .bouton {
+  flex-shrink: 0;
 }
 .processus h3 {
   font-family: var(--font-primary);
-  font-size: 64px;
+  font-size: clamp(30px, 7.1vh, 64px);
   font-weight: 400;
   line-height: 125%;
-  padding-bottom: 20px;
+  padding-bottom: clamp(6px, 2.2vh, 20px);
 }
 .processus .bouton {
   display: inline-block;
   font-family: var(--font-primary);
   font-weight: 700;
-  font-size: 28px;
+  font-size: clamp(18px, 3.1vh, 28px);
   line-height: 125%;
   color: var(--color-red);
   text-transform: uppercase;
-  padding: 20px 40px;
+  padding: clamp(10px, 2.2vh, 20px) clamp(20px, 4.4vh, 40px);
   border: solid 2px var(--color-red);
   border-radius: 8px;
   transition: background-color 0.3s ease;
@@ -2713,9 +2769,17 @@ button:focus-visible {
 .processus p {
   font-family: var(--font-secondary);
   font-weight: 400;
-  font-size: 22px;
+  font-size: clamp(15px, 2.45vh, 22px);
+  line-height: 140%;
+  max-width: 900px;
 }
 .processus p span {
   font-weight: 700;
+}
+
+@keyframes palette-tourne {
+  to {
+    transform: rotate(360deg);
+  }
 }
 /*# sourceMappingURL=main.css.map */
