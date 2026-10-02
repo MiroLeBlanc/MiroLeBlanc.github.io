@@ -933,7 +933,7 @@
   --spacing-md: 4rem;
   --spacing-lg: 6rem;
   --grid-gap: 30px;
-  --wrapper-padding: clamp(16px, 8.34vw, 120px);
+  --wrapper-padding: 120px;
 }
 
 /* ==========================================================================
@@ -1681,109 +1681,23 @@ button:focus-visible {
   gap: 120px;
   align-items: start;
 }
-.about .portrait {
-  margin: 0;
-}
-.about .portrait img {
+.about .content > img {
   display: block;
   width: 100%;
   aspect-ratio: 3/4;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 4px;
-  box-shadow: 0px 0px 20px 0px rgb(201, 67, 43);
 }
-.about .portrait figcaption {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 12px;
-  font-family: var(--font-number);
-  font-weight: 700;
-  font-size: 14px;
-  color: var(--color-texte-secondaire);
-}
-.about .droite > p {
+.about .droite p {
   margin-bottom: 30px;
+  font-size: 22px;
+  font-family: var(--font-secondary);
+  font-weight: 400;
 }
-.about .droite > p span {
+.about .droite p span {
   font-weight: 700;
-}
-.about .video {
-  position: relative;
-  aspect-ratio: 16/9;
-  background-color: var(--color-surface);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.about .video::before, .about .video::after {
-  content: "";
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  border: 0 solid var(--color-neutre);
-}
-.about .video::before {
-  top: -12px;
-  right: -12px;
-  border-top-width: 2px;
-  border-right-width: 2px;
-}
-.about .video::after {
-  bottom: -12px;
-  left: -12px;
-  border-bottom-width: 2px;
-  border-left-width: 2px;
-}
-.about .video p {
-  font-family: var(--font-number);
-  font-weight: 700;
-  font-size: 14px;
-  text-transform: uppercase;
-}
-.about .video__top {
-  position: absolute;
-  top: 16px;
-  left: 20px;
-  right: 20px;
-  display: flex;
-  justify-content: space-between;
-  color: var(--color-texte-secondaire);
-}
-.about .video__top .rec {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  color: var(--color-neutre);
-}
-.about .video__top .rec::before {
-  content: "";
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: var(--color-red);
-}
-.about .video__play {
-  width: 110px;
-  height: 110px;
-  border: 5px solid var(--color-red);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.about .video__play::before {
-  content: "";
-  width: 36px;
-  height: 42px;
-  margin-left: 8px;
-  background-color: var(--color-red);
-  clip-path: polygon(0 0, 100% 50%, 0 100%);
-}
-.about .video__timecode {
-  position: absolute;
-  bottom: 16px;
-  left: 20px;
+  color: var(--color-red);
 }
 
 .competences {
@@ -2248,7 +2162,7 @@ button:focus-visible {
   .has-js .projets .card {
     position: absolute;
     top: 52%;
-    width: min(620px, 42vw);
+    width: 620px;
     box-shadow: 0px 0px 14px 0px rgba(201, 67, 43, 0.6);
     pointer-events: auto;
   }
@@ -2512,6 +2426,7 @@ button:focus-visible {
 }
 .hero .intention span {
   font-weight: 700;
+  color: var(--color-red);
 }
 .hero .bouton {
   display: inline-block;
@@ -2569,6 +2484,7 @@ button:focus-visible {
 .infos .credits {
   border-bottom: 2px solid var(--color-surface);
   transition: background-color 0.3s ease;
+  transition: color 0.3 ease;
 }
 .infos .contexte .wrapper,
 .infos .credits .wrapper {
@@ -2579,6 +2495,10 @@ button:focus-visible {
 .infos .contexte:hover,
 .infos .credits:hover {
   background-color: var(--color-red);
+}
+.infos .contexte:hover span,
+.infos .credits:hover span {
+  color: var(--color-neutre);
 }
 .infos .contexte:hover h2,
 .infos .credits:hover h2 {
@@ -2596,6 +2516,7 @@ button:focus-visible {
 }
 .infos p span {
   font-weight: 700;
+  color: var(--color-red);
 }
 
 .processus .wrapper {
@@ -2609,7 +2530,6 @@ button:focus-visible {
   text-transform: uppercase;
   position: relative;
   padding-bottom: 25px;
-  margin-bottom: 85px;
   margin-top: 85px;
 }
 .processus h2::after {
@@ -2775,11 +2695,108 @@ button:focus-visible {
 }
 .processus p span {
   font-weight: 700;
+  color: var(--color-red);
 }
 
 @keyframes palette-tourne {
   to {
     transform: rotate(360deg);
   }
+}
+.denouement {
+  margin-bottom: 135px;
+}
+.denouement .cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-rows: auto auto;
+  text-align: center;
+  border-top: 1px solid rgba(242, 233, 221, 0.1);
+}
+.denouement .card {
+  display: grid;
+  grid-row: span 2;
+  grid-template-rows: subgrid;
+  row-gap: 0;
+  border-left: 1px solid rgba(242, 233, 221, 0.1);
+}
+.denouement .card:first-child {
+  border-left: none;
+}
+.denouement h2 {
+  font-family: var(--font-primary);
+  font-size: 52px;
+  line-height: 1.1;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 40px 20px;
+  border-bottom: 1px solid rgba(242, 233, 221, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.denouement p {
+  font-size: 22px;
+  font-family: var(--font-secondary);
+  font-weight: 400;
+  line-height: 140%;
+  padding: 30px 30px 50px;
+}
+.denouement p span {
+  font-weight: 700;
+  color: var(--color-red);
+}
+
+.suivant {
+  margin: 85px 0;
+}
+.suivant .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+.suivant .surtitre {
+  display: inline-block;
+  margin-bottom: 30px;
+  color: var(--color-red);
+  font-weight: 700;
+  font-family: var(--font-number);
+  font-size: 20px;
+  line-height: 87%;
+  padding: 10px 15px;
+  border: solid 2px var(--color-red);
+  border-radius: 4px;
+}
+.suivant h2 {
+  font-family: var(--font-primary);
+  font-size: 96px;
+  font-weight: 700;
+  padding-bottom: 10px;
+}
+.suivant p {
+  font-family: var(--font-primary);
+  color: var(--color-texte-secondaire);
+  font-weight: 400;
+  font-size: 28px;
+}
+.suivant .bouton {
+  background-color: var(--color-red);
+  color: var(--color-bg-primary);
+  display: inline-block;
+  font-family: var(--font-primary);
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 125%;
+  text-transform: uppercase;
+  padding: 20px 30px;
+  border: solid 1px var(--color-red);
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.suivant .bouton:hover {
+  text-decoration: none;
+  background-color: var(--color-neutre);
+  border-color: var(--color-neutre);
+  color: var(--color-bg-primary);
 }
 /*# sourceMappingURL=main.css.map */
