@@ -2105,4 +2105,427 @@ button:focus-visible {
   border-color: var(--color-neutre);
   color: var(--color-bg-primary);
 }
+
+@media (prefers-reduced-motion: no-preference) {
+  .has-js [data-scrolly=titre] {
+    translate: 0 120%;
+    clip-path: inset(-20% -10% 120% -10%);
+    transition: translate 1s cubic-bezier(0.19, 1, 0.22, 1), clip-path 1s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+  .has-js [data-scrolly=titre]::after {
+    scale: 0 1;
+    transform-origin: left;
+    transition: scale 0.8s cubic-bezier(0.19, 1, 0.22, 1) 0.4s;
+  }
+  .has-js [data-scrolly=titre].is-active {
+    translate: 0 0;
+    clip-path: inset(-20% -10% 0 -10%);
+  }
+  .has-js [data-scrolly=titre].is-active::after {
+    scale: 1 1;
+  }
+  .has-js [data-scrolly=fondu] {
+    opacity: 0;
+    translate: 0 30px;
+    filter: blur(6px);
+    transition: opacity 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0.2s, translate 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0.2s, filter 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0.2s;
+  }
+  .has-js [data-scrolly=fondu].is-active {
+    opacity: 1;
+    translate: 0 0;
+    filter: blur(0);
+  }
+  .has-js [data-scrolly=cascade] > * {
+    opacity: 0;
+    translate: 0 40px;
+    transition: opacity 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) var(--delai), translate 1s cubic-bezier(0.19, 1, 0.22, 1) var(--delai);
+  }
+  .has-js [data-scrolly=cascade] > *:nth-child(1) {
+    --delai: 0s;
+  }
+  .has-js [data-scrolly=cascade] > *:nth-child(2) {
+    --delai: 0.08s;
+  }
+  .has-js [data-scrolly=cascade] > *:nth-child(3) {
+    --delai: 0.16s;
+  }
+  .has-js [data-scrolly=cascade] > *:nth-child(4) {
+    --delai: 0.24s;
+  }
+  .has-js [data-scrolly=cascade] > *:nth-child(5) {
+    --delai: 0.32s;
+  }
+  .has-js [data-scrolly=cascade] > *:nth-child(6) {
+    --delai: 0.4s;
+  }
+  .has-js [data-scrolly=cascade] > *:nth-child(7) {
+    --delai: 0.48s;
+  }
+  .has-js [data-scrolly=cascade] > *:nth-child(8) {
+    --delai: 0.56s;
+  }
+  .has-js [data-scrolly=cascade].is-active > * {
+    opacity: 1;
+    translate: 0 0;
+  }
+  .has-js [data-scrolly=generique] .texte::before,
+  .has-js [data-scrolly=generique] .texte::after {
+    opacity: 0;
+    transition: opacity 0.6s cubic-bezier(0.165, 0.84, 0.44, 1) 0.2s, translate 1s cubic-bezier(0.19, 1, 0.22, 1) 0.2s;
+  }
+  .has-js [data-scrolly=generique] .texte::before {
+    translate: -16px -16px;
+  }
+  .has-js [data-scrolly=generique] .texte::after {
+    translate: -16px 16px;
+  }
+  .has-js [data-scrolly=generique] .surtitre {
+    opacity: 0;
+    translate: 0 20px;
+    transition: opacity 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) 0.3s, translate 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) 0.3s;
+  }
+  .has-js [data-scrolly=generique] h1 span {
+    display: inline-block;
+    translate: 0 120%;
+    clip-path: inset(-20% -10% 120% -10%);
+    transition: translate 1.4s cubic-bezier(0.19, 1, 0.22, 1) 0.4s, clip-path 1.4s cubic-bezier(0.19, 1, 0.22, 1) 0.4s;
+  }
+  .has-js [data-scrolly=generique] h1 span:nth-of-type(2) {
+    transition-delay: 0.55s;
+  }
+  .has-js [data-scrolly=generique] .texte p:last-child {
+    opacity: 0;
+    translate: 0 20px;
+    filter: blur(6px);
+    transition: opacity 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0.9s, translate 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0.9s, filter 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0.9s;
+  }
+  .has-js [data-scrolly=generique] .bouton {
+    opacity: 0;
+    translate: 0 20px;
+    transition: opacity 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) 1.1s, translate 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) 1.1s, background-color 0.3s ease;
+  }
+  .has-js [data-scrolly=generique] .divider {
+    scale: 0 1;
+    transform-origin: left;
+    transition: scale 1.6s cubic-bezier(1, 0, 0, 1) 0.6s;
+  }
+  .has-js [data-scrolly=generique] .bottom > * {
+    opacity: 0;
+    transition: opacity 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) 1.5s;
+  }
+  .has-js [data-scrolly=generique] .bottom > *:nth-child(2) {
+    transition-delay: 1.6s;
+  }
+  .has-js [data-scrolly=generique] .bottom > *:nth-child(3) {
+    transition-delay: 1.7s;
+  }
+  .has-js [data-scrolly=generique].is-active .texte::before,
+  .has-js [data-scrolly=generique].is-active .texte::after,
+  .has-js [data-scrolly=generique].is-active .surtitre,
+  .has-js [data-scrolly=generique].is-active .texte p:last-child,
+  .has-js [data-scrolly=generique].is-active .bouton,
+  .has-js [data-scrolly=generique].is-active .bottom > * {
+    opacity: 1;
+    translate: 0 0;
+    filter: blur(0);
+  }
+  .has-js [data-scrolly=generique].is-active h1 span {
+    translate: 0 0;
+    clip-path: inset(-20% -10% 0 -10%);
+  }
+  .has-js [data-scrolly=generique].is-active .divider {
+    scale: 1 1;
+  }
+  .has-js [data-scrolly=portrait] .portrait__cadre::before {
+    opacity: 0;
+    scale: 0.92;
+    transform-origin: bottom;
+    transition: opacity 0.8s cubic-bezier(0.165, 0.84, 0.44, 1), scale 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+  .has-js [data-scrolly=portrait] .portrait__cadre img {
+    opacity: 0;
+    translate: 0 30%;
+    clip-path: inset(-50% -50% 30% -50%);
+    transition: opacity 0.6s cubic-bezier(0.165, 0.84, 0.44, 1) 0.25s, translate 1.4s cubic-bezier(0.19, 1, 0.22, 1) 0.25s, clip-path 1.4s cubic-bezier(0.19, 1, 0.22, 1) 0.25s;
+  }
+  .has-js [data-scrolly=portrait] figcaption span {
+    opacity: 0;
+    transition: opacity 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) 0.8s;
+  }
+  .has-js [data-scrolly=portrait] figcaption span:last-child {
+    transition-delay: 0.95s;
+  }
+  .has-js [data-scrolly=portrait].is-active .portrait__cadre::before,
+  .has-js [data-scrolly=portrait].is-active .portrait__cadre img,
+  .has-js [data-scrolly=portrait].is-active figcaption span {
+    opacity: 1;
+    scale: 1;
+    translate: 0 0;
+  }
+  .has-js [data-scrolly=portrait].is-active .portrait__cadre img {
+    clip-path: inset(-50% -50% 0 -50%);
+  }
+  .has-js [data-scrolly=ecran] {
+    clip-path: inset(50% -40px 50% -40px);
+    transition: clip-path 1.2s cubic-bezier(1, 0, 0, 1) 0.3s;
+  }
+  .has-js [data-scrolly=ecran]::before, .has-js [data-scrolly=ecran]::after {
+    opacity: 0;
+    transition: opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) 1.2s, translate 0.8s cubic-bezier(0.19, 1, 0.22, 1) 1.2s;
+  }
+  .has-js [data-scrolly=ecran]::before {
+    translate: 12px -12px;
+  }
+  .has-js [data-scrolly=ecran]::after {
+    translate: -12px 12px;
+  }
+  .has-js [data-scrolly=ecran].is-active {
+    clip-path: inset(-40px);
+  }
+  .has-js [data-scrolly=ecran].is-active::before, .has-js [data-scrolly=ecran].is-active::after {
+    opacity: 1;
+    translate: 0 0;
+  }
+  .has-js [data-scrolly=jauge]:nth-child(1) {
+    --delai: 0s;
+  }
+  .has-js [data-scrolly=jauge]:nth-child(2) {
+    --delai: 0.1s;
+  }
+  .has-js [data-scrolly=jauge]:nth-child(3) {
+    --delai: 0.2s;
+  }
+  .has-js [data-scrolly=jauge]:nth-child(4) {
+    --delai: 0.3s;
+  }
+  .has-js [data-scrolly=jauge]:nth-child(5) {
+    --delai: 0.4s;
+  }
+  .has-js [data-scrolly=jauge] .competence {
+    opacity: 0;
+    translate: -30px 0;
+    transition: opacity 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) var(--delai), translate 1s cubic-bezier(0.19, 1, 0.22, 1) var(--delai);
+  }
+  .has-js [data-scrolly=jauge] .barre {
+    scale: 0 1;
+    transform-origin: left;
+    transition: scale 1s cubic-bezier(0.19, 1, 0.22, 1) var(--delai);
+  }
+  .has-js [data-scrolly=jauge] .remplissage {
+    transition-delay: calc(var(--delai) + 0.3s);
+  }
+  .has-js [data-scrolly=jauge] .pourcentage {
+    opacity: 0;
+    transition: opacity 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) calc(var(--delai) + 0.6s);
+  }
+  .has-js [data-scrolly=jauge].is-active .competence,
+  .has-js [data-scrolly=jauge].is-active .pourcentage {
+    opacity: 1;
+    translate: 0 0;
+  }
+  .has-js [data-scrolly=jauge].is-active .barre {
+    scale: 1 1;
+  }
+  .has-js [data-scrolly=tampons] > li {
+    opacity: 0;
+  }
+  .has-js [data-scrolly=tampons] > li:nth-child(1) {
+    --delai: 0s;
+  }
+  .has-js [data-scrolly=tampons] > li:nth-child(2) {
+    --delai: 0.12s;
+  }
+  .has-js [data-scrolly=tampons] > li:nth-child(3) {
+    --delai: 0.24s;
+  }
+  .has-js [data-scrolly=tampons] > li:nth-child(4) {
+    --delai: 0.36s;
+  }
+  .has-js [data-scrolly=tampons] > li:nth-child(5) {
+    --delai: 0.48s;
+  }
+  .has-js [data-scrolly=tampons].is-active > li {
+    opacity: 1;
+    animation: scrolly-tampon 0.6s cubic-bezier(0.165, 0.84, 0.44, 1) var(--delai) backwards;
+  }
+  .has-js [data-scrolly=pellicule]::before, .has-js [data-scrolly=pellicule]::after {
+    opacity: 0;
+    background-position: 440px 0;
+    transition: opacity 0.6s cubic-bezier(0.165, 0.84, 0.44, 1), background-position 2s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+  .has-js [data-scrolly=pellicule] > .card {
+    clip-path: inset(50% -40px 50% -40px);
+    transition: clip-path 1.2s cubic-bezier(1, 0, 0, 1) var(--delai);
+  }
+  .has-js [data-scrolly=pellicule] > .card:nth-child(1) {
+    --delai: 0.2s;
+  }
+  .has-js [data-scrolly=pellicule] > .card:nth-child(2) {
+    --delai: 0.32s;
+  }
+  .has-js [data-scrolly=pellicule] > .card:nth-child(3) {
+    --delai: 0.44s;
+  }
+  .has-js [data-scrolly=pellicule] > .card:nth-child(4) {
+    --delai: 0.56s;
+  }
+  .has-js [data-scrolly=pellicule] > .card img {
+    scale: 1.25;
+    transition: scale 1.8s cubic-bezier(0.19, 1, 0.22, 1) var(--delai);
+  }
+  .has-js [data-scrolly=pellicule] > .card p {
+    opacity: 0;
+    translate: 0 12px;
+    transition: opacity 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) calc(var(--delai) + 0.7s), translate 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) calc(var(--delai) + 0.7s);
+  }
+  .has-js [data-scrolly=pellicule].is-active::before, .has-js [data-scrolly=pellicule].is-active::after {
+    opacity: 1;
+    background-position: 0 0;
+  }
+  .has-js [data-scrolly=pellicule].is-active > .card {
+    clip-path: inset(-40px);
+  }
+  .has-js [data-scrolly=pellicule].is-active > .card img {
+    scale: 1;
+  }
+  .has-js [data-scrolly=pellicule].is-active > .card p {
+    opacity: 1;
+    translate: 0 0;
+  }
+  .has-js [data-scrolly=bandeau] > .card {
+    clip-path: inset(0 100% 0 0);
+    transition: clip-path 1.1s cubic-bezier(1, 0, 0, 1) var(--delai);
+  }
+  .has-js [data-scrolly=bandeau] > .card:nth-child(1) {
+    --delai: 0s;
+  }
+  .has-js [data-scrolly=bandeau] > .card:nth-child(2) {
+    --delai: 0.15s;
+  }
+  .has-js [data-scrolly=bandeau] > .card .icon {
+    scale: 0;
+    transition: scale 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) calc(var(--delai) + 0.8s);
+  }
+  .has-js [data-scrolly=bandeau] > .card p,
+  .has-js [data-scrolly=bandeau] > .card h4 {
+    opacity: 0;
+    translate: 0 20px;
+    transition: opacity 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) calc(var(--delai) + 0.6s), translate 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) calc(var(--delai) + 0.6s);
+  }
+  .has-js [data-scrolly=bandeau].is-active > .card {
+    clip-path: inset(0);
+  }
+  .has-js [data-scrolly=bandeau].is-active > .card .icon {
+    scale: 1;
+  }
+  .has-js [data-scrolly=bandeau].is-active > .card p,
+  .has-js [data-scrolly=bandeau].is-active > .card h4 {
+    opacity: 1;
+    translate: 0 0;
+  }
+  .has-js [data-scrolly=clap] .clap:first-child {
+    opacity: 0;
+    rotate: -3deg;
+    transform-origin: left bottom;
+  }
+  .has-js [data-scrolly=clap] .clap:last-child {
+    clip-path: inset(0 100% 0 0);
+    transition: clip-path 1.2s cubic-bezier(1, 0, 0, 1) 0.7s;
+  }
+  .has-js [data-scrolly=clap] p {
+    translate: 0 120%;
+    clip-path: inset(-20% -10% 120% -10%);
+    transition: translate 1.2s cubic-bezier(0.19, 1, 0.22, 1) 0.45s, clip-path 1.2s cubic-bezier(0.19, 1, 0.22, 1) 0.45s;
+  }
+  .has-js [data-scrolly=clap].is-active .clap:first-child {
+    opacity: 1;
+    rotate: 0deg;
+    animation: scrolly-clap 0.6s linear;
+  }
+  .has-js [data-scrolly=clap].is-active .clap:last-child {
+    clip-path: inset(0);
+  }
+  .has-js [data-scrolly=clap].is-active p {
+    translate: 0 0;
+    clip-path: inset(-20% -10% 0 -10%);
+  }
+  .has-js [data-scrolly=contact] h2 span {
+    display: inline-block;
+    translate: 0 120%;
+    clip-path: inset(-20% -10% 120% -10%);
+    transition: translate 1.2s cubic-bezier(0.19, 1, 0.22, 1), clip-path 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+  .has-js [data-scrolly=contact] h2 span:nth-of-type(2) {
+    transition-delay: 0.12s;
+  }
+  .has-js [data-scrolly=contact] .boutons {
+    opacity: 0;
+    translate: 0 30px;
+    filter: blur(6px);
+    transition: opacity 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0.5s, translate 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0.5s, filter 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0.5s;
+  }
+  .has-js [data-scrolly=contact] .droite li {
+    opacity: 0;
+    translate: 0 30px;
+    transition: opacity 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) var(--delai), translate 1s cubic-bezier(0.19, 1, 0.22, 1) var(--delai);
+  }
+  .has-js [data-scrolly=contact] .droite li:nth-child(1) {
+    --delai: 0.3s;
+  }
+  .has-js [data-scrolly=contact] .droite li:nth-child(2) {
+    --delai: 0.38s;
+  }
+  .has-js [data-scrolly=contact] .droite li:nth-child(3) {
+    --delai: 0.46s;
+  }
+  .has-js [data-scrolly=contact] .droite li:nth-child(4) {
+    --delai: 0.54s;
+  }
+  .has-js [data-scrolly=contact].is-active h2 span {
+    translate: 0 0;
+    clip-path: inset(-20% -10% 0 -10%);
+  }
+  .has-js [data-scrolly=contact].is-active .boutons,
+  .has-js [data-scrolly=contact].is-active .droite li {
+    opacity: 1;
+    translate: 0 0;
+    filter: blur(0);
+  }
+}
+@keyframes scrolly-tampon {
+  0% {
+    opacity: 0;
+    scale: 1.8;
+    filter: blur(4px);
+  }
+  60% {
+    opacity: 1;
+    scale: 0.94;
+    filter: blur(0);
+  }
+  100% {
+    scale: 1;
+  }
+}
+@keyframes scrolly-clap {
+  0% {
+    opacity: 0;
+    rotate: -3deg;
+    animation-timing-function: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+  }
+  10% {
+    opacity: 1;
+  }
+  60% {
+    rotate: 0deg;
+    animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  75% {
+    rotate: -0.4deg;
+    animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+  }
+  100% {
+    rotate: 0deg;
+  }
+}
 /*# sourceMappingURL=main.css.map */

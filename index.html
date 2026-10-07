@@ -55,11 +55,11 @@
         <!-- TODO : vidéo de fond. Ajouter ici : <video src="assets/videos/hero.mp4" autoplay muted loop playsinline></video> -->
         <div class="hub__media"></div>
 
-        <div class="wrapper">
+        <div class="wrapper" data-scrolly="generique">
             <div class="content">
                 <div class="texte">
                     <p class="surtitre">// Intégration multimédia — vidéo / web / motion</p>
-                    <h1>MIRO<br />LEBLANC</h1>
+                    <h1><span>MIRO</span><br /><span>LEBLANC</span></h1>
                     <p>
                         <span>Développeur web</span> et <span>monteur vidéo</span>. Je construis des sites qui tiennent debout et des séquences vidéo qui déchirent
                         l'attention.
@@ -88,9 +88,9 @@
 
     <section class="about" id="about">
         <div class="wrapper">
-            <h2>À propos</h2>
+            <h2 data-scrolly="titre">À propos</h2>
             <div class="content">
-                <figure class="portrait">
+                <figure class="portrait" data-scrolly="portrait">
                     <div class="portrait__cadre">
                         <img src="assets/images/profil.png" alt="Portrait de Miro Leblanc" />
                     </div>
@@ -101,12 +101,12 @@
                 </figure>
 
                 <div class="droite">
-                    <p>
+                    <p data-scrolly="fondu">
                         <span>Développeur web</span> et <span>monteur vidéo</span>, avec un vrai bagage en <span>vente</span>.<br />Je construis des choses qui
                         fonctionnent, qui racontent quelque chose, et qui finissent par convaincre — pas juste par bien paraître.
                     </p>
 
-                    <div class="video" data-component="YouTube" data-video-id="EKptf4xbqX8">
+                    <div class="video" data-component="YouTube" data-scrolly="ecran" data-video-id="EKptf4xbqX8">
                         <div class="js-video"></div>
                     </div>
                 </div>
@@ -116,29 +116,29 @@
 
     <section class="competences">
         <div class="wrapper">
-            <h3>Compétences</h3>
+            <h3 data-scrolly="titre">Compétences</h3>
             <div class="content">
-                <div class="card" data-scrolly>
+                <div class="card" data-scrolly="jauge">
                     <p class="competence">Montage vidéo</p>
                     <div class="barre"><span class="remplissage" style="width: 95%"></span></div>
                     <p class="pourcentage">00:95 %</p>
                 </div>
-                <div class="card" data-scrolly>
+                <div class="card" data-scrolly="jauge">
                     <p class="competence">Développement web</p>
                     <div class="barre"><span class="remplissage" style="width: 85%"></span></div>
                     <p class="pourcentage">00:85 %</p>
                 </div>
-                <div class="card" data-scrolly>
+                <div class="card" data-scrolly="jauge">
                     <p class="competence">Design graphique</p>
                     <div class="barre"><span class="remplissage" style="width: 75%"></span></div>
                     <p class="pourcentage">00:75 %</p>
                 </div>
-                <div class="card" data-scrolly>
+                <div class="card" data-scrolly="jauge">
                     <p class="competence">Animation 2D/3D</p>
                     <div class="barre"><span class="remplissage" style="width: 80%"></span></div>
                     <p class="pourcentage">00:80 %</p>
                 </div>
-                <div class="card" data-scrolly>
+                <div class="card" data-scrolly="jauge">
                     <p class="competence">Programmation</p>
                     <div class="barre"><span class="remplissage" style="width: 80%"></span></div>
                     <p class="pourcentage">00:80 %</p>
@@ -149,8 +149,8 @@
 
     <section class="logiciels">
         <div class="wrapper">
-            <h3>Logiciels</h3>
-            <div class="cards">
+            <h3 data-scrolly="titre">Logiciels</h3>
+            <div class="cards" data-scrolly="cascade">
                 <div class="card">
                     <img src="assets/images/davinci.png" alt="" />
                     <p class="nom">Davinci Resolve</p>
@@ -192,8 +192,8 @@
 
     <section class="qualites">
         <div class="wrapper">
-            <h3>Qualités humaines</h3>
-            <ul class="content">
+            <h3 data-scrolly="titre">Qualités humaines</h3>
+            <ul class="content" data-scrolly="tampons">
                 <li>Créatif</li>
                 <li>Compétitif</li>
                 <li>Persévérant</li>
@@ -205,8 +205,8 @@
 
     <section class="passions">
         <div class="wrapper">
-            <h3>Passions et intérêts</h3>
-            <div class="cards">
+            <h3 data-scrolly="titre">Passions et intérêts</h3>
+            <div class="cards" data-scrolly="pellicule">
                 <div class="card">
                     <img src="assets/images/basket.png" alt="" />
                     <p>Basketball</p>
@@ -229,8 +229,8 @@
 
     <section class="prix">
         <div class="wrapper">
-            <h3>Prix et distinctions</h3>
-            <div class="cards">
+            <h3 data-scrolly="titre">Prix et distinctions</h3>
+            <div class="cards" data-scrolly="bandeau">
                 <div class="card">
                     <svg class="icon">
                         <use href="#icon-prix"></use>
@@ -253,7 +253,7 @@
         <div class="projets__stage">
             <canvas class="projets__grille" data-component="GridScan"></canvas>
             <div class="wrapper">
-                <h3>Projets</h3>
+                <h3 data-scrolly="titre">Projets</h3>
                 <div class="projets__scene">
                     <a href="fiche1.html" class="card js-card">
                         <div class="card__media"><img src="assets/images/projet1.png" alt="" /></div>
@@ -347,7 +347,7 @@
         </div>
     </section>
 
-    <section class="stage">
+    <section class="stage" data-scrolly="clap">
         <div class="clap"></div>
         <div class="wrapper">
             <p>À la recherche d’un stage en<br /><span>développement web</span> ou en <span>montage vidéo</span></p>
@@ -357,9 +357,9 @@
 
     <!-- Footer / Contact -->
     <footer class="footer" id="contact">
-        <div class="wrapper">
+        <div class="wrapper" data-scrolly="contact">
             <div class="gauche">
-                <h2>Prêt à<br />créer</h2>
+                <h2><span>Prêt à</span><br /><span>créer</span></h2>
                 <div class="boutons">
                     <!-- TODO : lien vers le CV (PDF) -->
                     <a href="#" class="bouton bouton--plein">Télécharger le CV</a>
