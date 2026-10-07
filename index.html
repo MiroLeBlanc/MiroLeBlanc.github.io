@@ -16,6 +16,9 @@
 </head>
 
 <body data-component="Scrolly">
+    <div class="curseur" data-component="Curseur" aria-hidden="true">
+        <div class="curseur__rond"></div>
+    </div>
 
     <!-- Header -->
     <header class="header" data-component="Header">
@@ -23,13 +26,13 @@
             <a href="index.html" class="logo"><img src="assets/images/logo.png" alt="Miro Leblanc — accueil"></a>
 
             <ul class="nav__list">
-                <li class="nav__item"><a href="#about" class="nav__link"><span class="nav__label">À propos</span><svg class="icon">
+                <li class="nav__item"><a href="index.html#about" class="nav__link"><span class="nav__label">À propos</span><svg class="icon">
                             <use href="#icon-about"></use>
                         </svg></a></li>
-                <li class="nav__item"><a href="#projets" class="nav__link"><span class="nav__label">Projets</span><svg class="icon">
+                <li class="nav__item"><a href="index.html#projets" class="nav__link"><span class="nav__label">Projets</span><svg class="icon">
                             <use href="#icon-projets"></use>
                         </svg></a></li>
-                <li class="nav__item"><a href="#contact" class="nav__link"><span class="nav__label">Contact</span><svg class="icon">
+                <li class="nav__item"><a href="index.html#contact" class="nav__link"><span class="nav__label">Contact</span><svg class="icon">
                             <use href="#icon-contact"></use>
                         </svg></a></li>
                 <li class="nav__item nav__item__icon"><a href="" class="nav__link" target="_blank" rel="noopener"><span class="nav__label">LinkedIn</span><svg class="icon">
@@ -87,7 +90,15 @@
         <div class="wrapper">
             <h2>À propos</h2>
             <div class="content">
-                <img src="assets/images/profil.png" alt="" />
+                <figure class="portrait">
+                    <div class="portrait__cadre">
+                        <img src="assets/images/profil.png" alt="Portrait de Miro Leblanc" />
+                    </div>
+                    <figcaption>
+                        <span>Still 001</span>
+                        <span>f/1.8 · 50mm</span>
+                    </figcaption>
+                </figure>
 
                 <div class="droite">
                     <p>
@@ -238,6 +249,7 @@
 
     <section class="projets" id="projets" data-component="Projets">
         <div class="projets__stage">
+            <canvas class="projets__grille" data-component="GridScan"></canvas>
             <div class="wrapper">
                 <h3>Projets</h3>
                 <div class="projets__scene">
