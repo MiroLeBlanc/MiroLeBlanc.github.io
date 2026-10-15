@@ -55,24 +55,26 @@
         <div class="wrapper">
             <div class="gauche">
                 <p class="surtitre">CLIP 03 / 05</p>
-                <h1>Boxhotel</h1>
+                <h1>Q-tipousse</h1>
                 <div class="type">
                     <p>TYPE DE PROJET</p>
-                    <p>Intégration HTML/CSS/JS</p>
+                    <p>Intégration Wordpress/HTML/CSS/JS</p>
                 </div>
                 <div class="contexte">
                     <p>CONTEXTE</p>
-                    <p>Projet scolaire</p>
+                    <p>Webjam 2026</p>
                 </div>
                 <p class="intention">
-                    Recréer un site web d'hôtellerie à <span>l'identique</span> d'une maquette Figma, page par page, en HTML, CSS et JavaScript — jusqu'au moindre
-                    détail.
+                    Pour le Webjam 2026, mon équipe à créé une invention fictive et développé son <span>site WordPress complet</span>, administrable avec des types
+                    de contenus personnalisés et des champs ACF.
                 </p>
                 <a href="" class="bouton" target="_blank" rel="noopener">VOIR LE SITE WEB</a>
             </div>
 
             <div class="droite">
+                <div class="logo"><img src="assets/images/wordpress.png" alt="Figma" /></div>
                 <div class="logo"><img src="assets/images/vscode.png" alt="Figma" /></div>
+                <div class="logo"><img src="assets/images/figma.png" alt="Figma" /></div>
             </div>
         </div>
     </section>
@@ -84,9 +86,8 @@
             <div class="wrapper">
                 <h2>Contexte</h2>
                 <p>
-                    Projet scolaire visant à recréer intégralement un site web à partir d'une <span>maquette Figma fournie</span>, sans aucune liberté créative sur
-                    le design. L'exercice portait entièrement sur la précision de <span>l'intégration</span> : chaque page devait reproduire fidèlement la maquette,
-                    au pixel près, en HTML, CSS et JavaScript.
+                    Le webjam est une compétition de développement web par <span>équipe</span>. La thématique de 2026 demandait d'inventer un produit, de créer
+                    l'entreprise qui le propose et de construire le site qui le fait connaître.
                 </p>
             </div>
         </div>
@@ -94,8 +95,9 @@
             <div class="wrapper">
                 <h2>Crédits</h2>
                 <p>
-                    Intégration complète (HTML/CSS/JS) réalisée en <span>solo</span>. Maquette Figma conçue par <span>Tatiana Titov</span>, fournie dans le cadre du
-                    cours. Toutes les pages sont fonctionnelles et fidèles au design original.
+                    Projet d'équipe réalisé au webjam 2026, avec Yoan Robitaille, Nathan Fortier et Éli Bousquet. Je me suis occupé de reproduire la maquette que
+                    mon collègue à fait en <span>HTML/CSS</span> et de transformer tout le site en <span>PHP</span>. J'ai aussi entré l'ensemble des contenus dans
+                    Wordpress et créer les différents <span>CPT et ACF</span>.
                 </p>
             </div>
         </div>
@@ -108,10 +110,10 @@
             <div class="plans js-horiz">
                 <div class="plan1 js-panel">
                     <p class="plan">PLAN 01</p>
-                    <h3>Analyse de la maquette</h3>
+                    <h3>Créer les CPT et les champs ACF</h3>
                     <p>
-                        Étude complète de la maquette <span>Figma</span> fournie par Tatiana Titov — structure des pages, espacements, typographie, composants
-                        répétés — pour repérer les éléments réutilisables avant de commencer l'intégration.
+                        Dès le début du projet, j'ai créé tous les <span>types de contenus personnalisés (CPT)</span> et les <span>champs ACF</span> du site. Je
+                        l'ai fait en premier pour que mes coéquipiers puissent travailler en parallèle sur la maquette et les contenus.
                     </p>
                     <div class="media">
                         <img src="assets/images/projet1style.png" alt="" />
@@ -128,10 +130,10 @@
 
                 <div class="plan2 js-panel">
                     <p class="plan">PLAN 02</p>
-                    <h3>Installation des médias</h3>
+                    <h3>Intégrer les contenus dans WordPress</h3>
                     <p>
-                        Extraction et organisation de toutes les <span>images et icônes</span> du site directement depuis Figma, classées par page et par section
-                        pour éviter les allers-retours constants vers la maquette en cours d'intégration.
+                        Quand les contenus ont été prêts, je les ai tous intégrés dans <span>WordPress</span>. J'ai rempli les champs ACF de chaque CPT selon ce que
+                        les pages demandaient.
                     </p>
                     <div class="media">
                         <img src="assets/images/projet1woo.png" alt="" />
@@ -140,10 +142,10 @@
 
                 <div class="plan3 js-panel">
                     <p class="plan">PLAN 03</p>
-                    <h3>Intégration du HTML</h3>
+                    <h3>Reproduire la maquette en HTML/CSS</h3>
                     <p>
-                        Construction de la structure <span>HTML</span> complète de chaque page, en respectant la hiérarchie exacte de la maquette (sections,
-                        composants, répétitions) pour que le balisage reflète fidèlement l'organisation visuelle prévue.
+                        J'ai ensuite reproduit la maquette en HTML et CSS, page par page. J'ai fait toutes les pages sauf l'accueil. Je les ai d'abord faites en
+                        <span>statique</span> pour valider le visuel avant de brancher les données.
                     </p>
                     <div class="media">
                         <img src="assets/images/projet1blocs.png" alt="" />
@@ -152,10 +154,10 @@
 
                 <div class="plan4 js-panel">
                     <p class="plan">PLAN 04</p>
-                    <h3>Intégration du CSS</h3>
+                    <h3>Rendre les pages dynamiques en PHP</h3>
                     <p>
-                        Écriture du <span>CSS</span> complet, divisé par section plutôt que dans un seul fichier, pour garder le <span>code organisé</span> et plus
-                        facile à ajuster page par page durant le développement.
+                        J'ai converti <span>moi-même</span> toutes ces pages en PHP pour qu'elles lisent leur contenu dans les CPT et les champs ACF au lieu d'avoir
+                        du texte écrit à la main.
                     </p>
                     <div class="media">
                         <img src="assets/images/projet1css.png" alt="" />
@@ -165,10 +167,10 @@
 
                 <div class="plan5 js-panel">
                     <p class="plan">PLAN 05</p>
-                    <h3>Intégration du JavaScript</h3>
+                    <h3>Ajustements et finitions</h3>
                     <p>
-                        Création d'une <span>component factory</span> et de composantes réutilisables pour gérer le fonctionnement dynamique du site, incluant la
-                        page modale, plutôt que de dupliquer la logique à chaque occurrence.
+                        Pour terminer, j'ai fait plusieurs petits ajustements : j'ai <span>corrigé</span> ce qui ne fonctionnait pas et j'ai ajouté un
+                        <span>modèle 3D</span>. Cette étape a servi à peaufiner l'ensemble avant de présenter le projet.
                     </p>
                     <div class="media">
                         <img src="assets/images/projet1fin.png" alt="" />
@@ -185,22 +187,22 @@
                 <div class="card">
                     <h2>Défis</h2>
                     <p>
-                        Reproduire fidèlement la maquette Figma au <span>pixel près</span>, tout en structurant le JavaScript pour que la page modale et les
-                        composants répétés fonctionnent sans dupliquer le code partout.
+                        Le plus gros défi a été de tout <span>convertir en PHP</span>. C'était long, et il fallait penser à mettre chaque élément en
+                        <span>dynamique</span>, sans laisser de texte écrit à la main dans les pages.
                     </p>
                 </div>
                 <div class="card">
                     <h2>Solutions</h2>
                     <p>
-                        Création d'une component factory en JavaScript pour générer les <span>composantes réutilisables</span> à partir d'un seul bloc de logique,
-                        plutôt que de recoder chaque instance manuellement.
+                        J'ai converti les pages <span>une par une</span> et je les ai comparées à mes champs ACF pour m'assurer que chaque contenu venait bien de
+                        l'administration.
                     </p>
                 </div>
                 <div class="card">
                     <h2>Apprentissage</h2>
                     <p>
-                        Une meilleure <span>compréhension</span> de la structuration du JavaScript en composantes réutilisables, et de l'importance de séparer le
-                        CSS par section pour garder un <span>code organisé</span> sur un projet à plusieurs pages.
+                        J'ai appris à bien <span>travailler en équipe</span>. Nous nous sommes séparé les tâches de façon claire, donc chacun savait quoi faire et
+                        tout avançait très vite.
                     </p>
                 </div>
             </div>
@@ -211,12 +213,12 @@
     <section class="suivant">
         <div class="wrapper">
             <div class="gauche">
-                <p class="surtitre">CLIP SUIVANT 04 / 05</p>
-                <h2>Virage extrême</h2>
-                <p>Montage vidéo</p>
+                <p class="surtitre">CLIP SUIVANT 02 / 05</p>
+                <h2>CLIP MUSICAL</h2>
+                <p>Montage vidéo et synchronisation audio</p>
             </div>
             <div class="droite">
-                <a href="fiche4.html" class="bouton">VOIR LE PROJET</a>
+                <a href="fiche2.html" class="bouton">VOIR LE PROJET</a>
             </div>
         </div>
     </section>

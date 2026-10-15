@@ -1191,7 +1191,7 @@ button:focus-visible {
 }
 
 .prix {
-  margin-bottom: 135px;
+  margin-bottom: 100px;
 }
 .prix h3 {
   font-family: var(--font-primary);
@@ -1215,14 +1215,15 @@ button:focus-visible {
 }
 .prix .cards {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
   gap: 25px;
 }
 .prix .card {
   background-color: var(--color-surface);
   border-radius: 4px;
-  width: 100%;
+  width: calc((100% - 25px) / 2);
   height: 355px;
   padding: 0 50px;
   position: relative;
@@ -2404,6 +2405,9 @@ button:focus-visible {
   }
   .has-js [data-scrolly=bandeau] > .card:nth-child(2) {
     --delai: 0.15s;
+  }
+  .has-js [data-scrolly=bandeau] > .card:nth-child(3) {
+    --delai: 0.3s;
   }
   .has-js [data-scrolly=bandeau] > .card .icon {
     scale: 0;
