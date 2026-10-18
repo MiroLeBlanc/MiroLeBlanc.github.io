@@ -4,7 +4,22 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Miro Leblanc</title>
+    <title>Clip musical — Miro Leblanc</title>
+    <meta name="description" content="Clip musical : extraits de clips et de performances live de Playboi Carti remontés en un nouveau vidéoclip. Montage, synchronisation audio et effets visuels." />
+    <meta name="theme-color" content="#0E0B0A" />
+
+    <link rel="icon" type="image/png" href="assets/icons/favicon.png" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="fr_CA" />
+    <meta property="og:site_name" content="Miro Leblanc" />
+    <meta property="og:title" content="Clip musical — Miro Leblanc" />
+    <meta property="og:description" content="Clip musical : extraits de clips et de performances live de Playboi Carti remontés en un nouveau vidéoclip. Montage, synchronisation audio et effets visuels." />
+    <meta property="og:url" content="https://miroleblanc.github.io/fiche2.html" />
+    <meta property="og:image" content="https://miroleblanc.github.io/assets/og/fiche2.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,6 +28,17 @@
     <link rel="stylesheet" href="styles/main.css" />
 
     <script src="scripts/main.js" defer></script>
+    <script>
+        try {
+            var clap = JSON.parse(sessionStorage.getItem('clap'));
+            if (clap) {
+                sessionStorage.removeItem('clap');
+                document.documentElement.classList.add('clap-ferme');
+                document.documentElement.style.setProperty('--clap-titre', JSON.stringify(clap.titre));
+                document.documentElement.style.setProperty('--clap-scene', JSON.stringify(clap.scene));
+            }
+        } catch (e) {}
+    </script>
 </head>
 
 <body data-component="Scrolly">
@@ -20,12 +46,35 @@
         <div class="curseur__rond"></div>
     </div>
 
+    <div class="clap-transition" data-component="Transition" aria-hidden="true">
+        <div class="clap-transition__haut"></div>
+        <div class="clap-transition__bas">
+            <div class="clap-transition__ardoise">
+                <div class="clap-transition__ligne">
+                    <p>Prod. Miro Leblanc</p>
+                    <p>Prise 01</p>
+                </div>
+                <p class="clap-transition__titre"></p>
+                <div class="clap-transition__ligne">
+                    <p class="clap-transition__scene"></p>
+                    <p>Intégration multimédia</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Header -->
     <header class="header" data-component="Header">
         <nav class="nav">
             <a href="index.html" class="logo"><img src="assets/images/logo.png" alt="Miro Leblanc — accueil"></a>
 
-            <ul class="nav__list">
+            <button class="nav__toggle js-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu">
+                <svg class="icon">
+                    <use href="#icon-menu"></use>
+                </svg>
+            </button>
+
+            <ul class="nav__list" id="menu">
                 <li class="nav__item"><a href="index.html#about" class="nav__link"><span class="nav__label">À propos</span><svg class="icon">
                             <use href="#icon-about"></use>
                         </svg></a></li>
@@ -35,10 +84,10 @@
                 <li class="nav__item"><a href="index.html#contact" class="nav__link"><span class="nav__label">Contact</span><svg class="icon">
                             <use href="#icon-contact"></use>
                         </svg></a></li>
-                <li class="nav__item nav__item__icon"><a href="https://www.linkedin.com/in/miro-leblanc-4770b6442/?isSelfProfile=true" class="nav__link" target="_blank" rel="noopener"><span class="nav__label">LinkedIn</span><svg class="icon">
+                <li class="nav__item nav__item__icon"><a href="https://www.linkedin.com/in/miro-leblanc-4770b6442" class="nav__link" target="_blank" rel="noopener"><span class="nav__label">LinkedIn</span><svg class="icon">
                             <use href="#icon-linkedin"></use>
                         </svg></a></li>
-                <li class="nav__item nav__item__icon"><a href="https://www.youtube.com/watch?v=EKptf4xbqX8" class="nav__link" target="_blank" rel="noopener"><span class="nav__label">YouTube</span><svg class="icon">
+                <li class="nav__item nav__item__icon"><a href="https://www.youtube.com/@MiroLeBlanc" class="nav__link" target="_blank" rel="noopener"><span class="nav__label">YouTube</span><svg class="icon">
                             <use href="#icon-youtube"></use>
                         </svg></a></li>
                 <li class="nav__item nav__item__icon"><a href="" class="nav__link" target="_blank" rel="noopener"><span class="nav__label">GitHub</span><svg class="icon">
@@ -52,6 +101,10 @@
     </header>
 
     <section class="hero">
+        <div class="hero__media">
+            <video src="assets/videos/projet2.mp4" autoplay muted loop playsinline></video>
+        </div>
+
         <div class="wrapper">
             <div class="gauche">
                 <p class="surtitre">CLIP 02 / 05</p>
@@ -72,7 +125,7 @@
                     L’objectif était de démontrer mes compétences en montage vidéo, synchronisation audio et en <span>effets visuels</span>. Le projet réutilise des
                     extraits de clips et de performances live de Playboi Carti pour construire un tout nouveau <span>vidéoclip</span>.
                 </p>
-                <a href="https://www.youtube.com/watch?v=2Wbv7vFN8O0" class="bouton" target="_blank" rel="noopener">VOIR LA VIDÉO</a>
+                <a href="#video" class="bouton">VOIR LA VIDÉO</a>
             </div>
 
             <div class="droite">
@@ -128,8 +181,8 @@
                     <p class="plan">PLAN 02</p>
                     <h3>Synchronisation des images avec la musique</h3>
                     <p>
-                        Montage des extraits choisis dans <span>Premiere Pro</span>, en ajustant la durée et le point de coupe de chaque plan pour qu'il tombe
-                        exactement sur les temps forts de la chanson et pour que cela donne l'impression que le chanteur chante sur cette chanson.
+                        Montage des extraits dans <span>Premiere Pro</span>, en ajustant la durée et le point de coupe de chaque plan pour qu'il tombe exactement
+                        sur les temps forts de la chanson et pour que cela donne l'impression que le chanteur chante sur cette chanson.
                     </p>
                     <div class="media">
                         <img src="assets/images/projet2.1.png" alt="" />
@@ -141,9 +194,7 @@
                     <h3>Ajout d'effets visuels</h3>
                     <p>
                         Passage dans After Effects pour <span>uniformiser</span> des extraits filmés dans des conditions très différentes. Corrections de couleur,
-                        transitions et ajout d'éléments graphiques supplémentaires pour que l'ensemble ait une
-                        <span>cohérence visuelle</span>
-                        , malgré l'origine variée des images.
+                        transitions et ajout d'éléments graphiques pour que l'ensemble ait une <span>cohérence visuelle</span>.
                     </p>
                     <div class="media">
                         <img src="assets/images/projet2.png" alt="" />
@@ -173,9 +224,22 @@
                     </p>
                     <div class="media">
                         <img src="assets/images/projet2.2.png" alt="" />
-                        <a href="" class="bouton" target="_blank" rel="noopener">VOIR LA VIDÉO</a>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="titre_video" id="video">
+        <div class="wrapper">
+            <h2>Résultat</h2>
+        </div>
+    </div>
+
+    <section class="video_fiche" data-component="PleinEcran">
+        <div class="wrapper">
+            <div class="video" data-component="YouTube" data-video-id="7UGv00uDq4w">
+                <div class="js-video"></div>
             </div>
         </div>
     </section>
@@ -214,7 +278,7 @@
                 <p>Intégration web & e-commerce</p>
             </div>
             <div class="droite">
-                <a href="fiche1.html" class="bouton">VOIR LE PROJET</a>
+                <a href="fiche3.html" class="bouton">VOIR LE PROJET</a>
             </div>
         </div>
     </section>

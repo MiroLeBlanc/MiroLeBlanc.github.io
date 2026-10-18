@@ -4,7 +4,22 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Miro Leblanc</title>
+    <title>ChromeVault — Miro Leblanc</title>
+    <meta name="description" content="ChromeVault : intégration WordPress/WooCommerce d'une boutique de vêtements et d'accessoires de luxe Chrome Hearts, avec un design complet en CSS personnalisé." />
+    <meta name="theme-color" content="#0E0B0A" />
+
+    <link rel="icon" type="image/png" href="assets/icons/favicon.png" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="fr_CA" />
+    <meta property="og:site_name" content="Miro Leblanc" />
+    <meta property="og:title" content="ChromeVault — Miro Leblanc" />
+    <meta property="og:description" content="ChromeVault : intégration WordPress/WooCommerce d'une boutique de vêtements et d'accessoires de luxe Chrome Hearts, avec un design complet en CSS personnalisé." />
+    <meta property="og:url" content="https://miroleblanc.github.io/fiche3.html" />
+    <meta property="og:image" content="https://miroleblanc.github.io/assets/og/fiche3.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,6 +28,17 @@
     <link rel="stylesheet" href="styles/main.css" />
 
     <script src="scripts/main.js" defer></script>
+    <script>
+        try {
+            var clap = JSON.parse(sessionStorage.getItem('clap'));
+            if (clap) {
+                sessionStorage.removeItem('clap');
+                document.documentElement.classList.add('clap-ferme');
+                document.documentElement.style.setProperty('--clap-titre', JSON.stringify(clap.titre));
+                document.documentElement.style.setProperty('--clap-scene', JSON.stringify(clap.scene));
+            }
+        } catch (e) {}
+    </script>
 </head>
 
 <body data-component="Scrolly">
@@ -20,12 +46,35 @@
         <div class="curseur__rond"></div>
     </div>
 
+    <div class="clap-transition" data-component="Transition" aria-hidden="true">
+        <div class="clap-transition__haut"></div>
+        <div class="clap-transition__bas">
+            <div class="clap-transition__ardoise">
+                <div class="clap-transition__ligne">
+                    <p>Prod. Miro Leblanc</p>
+                    <p>Prise 01</p>
+                </div>
+                <p class="clap-transition__titre"></p>
+                <div class="clap-transition__ligne">
+                    <p class="clap-transition__scene"></p>
+                    <p>Intégration multimédia</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Header -->
     <header class="header" data-component="Header">
         <nav class="nav">
             <a href="index.html" class="logo"><img src="assets/images/logo.png" alt="Miro Leblanc — accueil"></a>
 
-            <ul class="nav__list">
+            <button class="nav__toggle js-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu">
+                <svg class="icon">
+                    <use href="#icon-menu"></use>
+                </svg>
+            </button>
+
+            <ul class="nav__list" id="menu">
                 <li class="nav__item"><a href="index.html#about" class="nav__link"><span class="nav__label">À propos</span><svg class="icon">
                             <use href="#icon-about"></use>
                         </svg></a></li>
@@ -35,10 +84,10 @@
                 <li class="nav__item"><a href="index.html#contact" class="nav__link"><span class="nav__label">Contact</span><svg class="icon">
                             <use href="#icon-contact"></use>
                         </svg></a></li>
-                <li class="nav__item nav__item__icon"><a href="https://www.linkedin.com/in/miro-leblanc-4770b6442/?isSelfProfile=true" class="nav__link" target="_blank" rel="noopener"><span class="nav__label">LinkedIn</span><svg class="icon">
+                <li class="nav__item nav__item__icon"><a href="https://www.linkedin.com/in/miro-leblanc-4770b6442" class="nav__link" target="_blank" rel="noopener"><span class="nav__label">LinkedIn</span><svg class="icon">
                             <use href="#icon-linkedin"></use>
                         </svg></a></li>
-                <li class="nav__item nav__item__icon"><a href="https://www.youtube.com/watch?v=EKptf4xbqX8" class="nav__link" target="_blank" rel="noopener"><span class="nav__label">YouTube</span><svg class="icon">
+                <li class="nav__item nav__item__icon"><a href="https://www.youtube.com/@MiroLeBlanc" class="nav__link" target="_blank" rel="noopener"><span class="nav__label">YouTube</span><svg class="icon">
                             <use href="#icon-youtube"></use>
                         </svg></a></li>
                 <li class="nav__item nav__item__icon"><a href="" class="nav__link" target="_blank" rel="noopener"><span class="nav__label">GitHub</span><svg class="icon">
@@ -52,29 +101,36 @@
     </header>
 
     <section class="hero">
+        <div class="hero__media">
+            <video src="assets/videos/projet1.mp4" autoplay muted loop playsinline></video>
+        </div>
+
         <div class="wrapper">
             <div class="gauche">
                 <p class="surtitre">CLIP 03 / 05</p>
-                <h1>Q-tipousse</h1>
+                <h1>
+                    Chrome
+                    <br />
+                    Vault
+                </h1>
                 <div class="type">
                     <p>TYPE DE PROJET</p>
-                    <p>Intégration Wordpress/HTML/CSS/JS</p>
+                    <p>Intégration web & e-commerce</p>
                 </div>
                 <div class="contexte">
                     <p>CONTEXTE</p>
-                    <p>Webjam 2026</p>
+                    <p>Projet personnel</p>
                 </div>
                 <p class="intention">
-                    Pour le Webjam 2026, mon équipe à créé une invention fictive et développé son <span>site WordPress complet</span>, administrable avec des types
-                    de contenus personnalisés et des champs ACF.
+                    L’intention du projet est de faire de la vente de vêtements et d’accessoires de luxe de la marque Chrome Hearts. C’est un projet personnel dans
+                    le but de pouvoir <span>vendre et présenter</span> des produits de luxe.
                 </p>
-                <a href="" class="bouton" target="_blank" rel="noopener">VOIR LE SITE WEB</a>
+                <a href="https://chromevaults.com" class="bouton" target="_blank" rel="noopener">VOIR LE SITE EN LIGNE</a>
             </div>
 
             <div class="droite">
-                <div class="logo"><img src="assets/images/wordpress.png" alt="Figma" /></div>
-                <div class="logo"><img src="assets/images/vscode.png" alt="Figma" /></div>
                 <div class="logo"><img src="assets/images/figma.png" alt="Figma" /></div>
+                <div class="logo"><img src="assets/images/wordpress.png" alt="WordPress" /></div>
             </div>
         </div>
     </section>
@@ -86,8 +142,10 @@
             <div class="wrapper">
                 <h2>Contexte</h2>
                 <p>
-                    Le webjam est une compétition de développement web par <span>équipe</span>. La thématique de 2026 demandait d'inventer un produit, de créer
-                    l'entreprise qui le propose et de construire le site qui le fait connaître.
+                    Construction d'un site e-commerce en <span>WordPress/WooCommerce</span> avec le thème Astra, en développant un système de
+                    <span>design complet</span> appliqué via du CSS personnalisé ciblé page par page. Le travail a couvert la création de
+                    <span>sections interactives</span>, le stylisme du <span>feed Instagram</span> et des <span>différentes pages</span> et la génération des
+                    <span>pages légales</span>.
                 </p>
             </div>
         </div>
@@ -95,9 +153,8 @@
             <div class="wrapper">
                 <h2>Crédits</h2>
                 <p>
-                    Projet d'équipe réalisé au webjam 2026, avec Yoan Robitaille, Nathan Fortier et Éli Bousquet. Je me suis occupé de reproduire la maquette que
-                    mon collègue à fait en <span>HTML/CSS</span> et de transformer tout le site en <span>PHP</span>. J'ai aussi entré l'ensemble des contenus dans
-                    Wordpress et créer les différents <span>CPT et ACF</span>.
+                    Projet entièrement réalisé par <span>moi</span>. De la conception du site web à la promotion sur Instagram. IA utilisée en soutien pour certains
+                    ajustements CSS.
                 </p>
             </div>
         </div>
@@ -110,10 +167,11 @@
             <div class="plans js-horiz">
                 <div class="plan1 js-panel">
                     <p class="plan">PLAN 01</p>
-                    <h3>Créer les CPT et les champs ACF</h3>
+                    <h3>Guide de style</h3>
                     <p>
-                        Dès le début du projet, j'ai créé tous les <span>types de contenus personnalisés (CPT)</span> et les <span>champs ACF</span> du site. Je
-                        l'ai fait en premier pour que mes coéquipiers puissent travailler en parallèle sur la maquette et les contenus.
+                        Palette réduite à <span>trois tons</span>, serif pour les titres, photo sur <span>fond neutre</span> : dans la revente de luxe, la retenue
+                        est ce qui rassure — un site chargé fait douter de l'authenticité des pièces. J'ai figé ces choix dans Figma avant de coder pour ne rien
+                        improviser en cours de route.
                     </p>
                     <div class="media">
                         <img src="assets/images/projet1style.png" alt="" />
@@ -130,10 +188,10 @@
 
                 <div class="plan2 js-panel">
                     <p class="plan">PLAN 02</p>
-                    <h3>Intégrer les contenus dans WordPress</h3>
+                    <h3>Configuration woocommerce</h3>
                     <p>
-                        Quand les contenus ont été prêts, je les ai tous intégrés dans <span>WordPress</span>. J'ai rempli les champs ACF de chaque CPT selon ce que
-                        les pages demandaient.
+                        L'installation n'est que le début : <span>WooCommerce</span> pose des dizaines de questions avant d'accepter une première transaction —
+                        devise, zones et frais de livraison, taxes provinciales, seuils, courriels transactionnels.
                     </p>
                     <div class="media">
                         <img src="assets/images/projet1woo.png" alt="" />
@@ -142,22 +200,23 @@
 
                 <div class="plan3 js-panel">
                     <p class="plan">PLAN 03</p>
-                    <h3>Reproduire la maquette en HTML/CSS</h3>
+                    <h3>Pages montées avec les blocs</h3>
                     <p>
-                        J'ai ensuite reproduit la maquette en HTML et CSS, page par page. J'ai fait toutes les pages sauf l'accueil. Je les ai d'abord faites en
-                        <span>statique</span> pour valider le visuel avant de brancher les données.
+                        J'ai construit les gabarits avec les <span>blocs WordPress</span> plutôt qu'un constructeur de pages, pour pouvoir ajouter une pièce au
+                        catalogue sans ouvrir l'éditeur de code. Le HTML manuel intervient seulement là où les blocs ne suffisaient pas : la galerie produit et la
+                        grille d'état.
                     </p>
                     <div class="media">
                         <img src="assets/images/projet1blocs.png" alt="" />
                     </div>
                 </div>
 
-                <div class="plan4 js-panel">
+                <div class="plan4 plan4-1 js-panel">
                     <p class="plan">PLAN 04</p>
-                    <h3>Rendre les pages dynamiques en PHP</h3>
+                    <h3>CSS additionnel et responsive</h3>
                     <p>
-                        J'ai converti <span>moi-même</span> toutes ces pages en PHP pour qu'elles lisent leur contenu dans les CPT et les champs ACF au lieu d'avoir
-                        du texte écrit à la main.
+                        J'ai bâti sur le thème <span>Astra</span> et écrit l'ensemble de l'habillage dans son <span>CSS additionnel</span>. Écrire le style à la
+                        main plutôt que de le cliquer, c'est ce qui me donne le contrôle exact des espacements et de la typographie sur toutes les pages.
                     </p>
                     <div class="media">
                         <img src="assets/images/projet1css.png" alt="" />
@@ -167,10 +226,11 @@
 
                 <div class="plan5 js-panel">
                     <p class="plan">PLAN 05</p>
-                    <h3>Ajustements et finitions</h3>
+                    <h3>Révision complète avant ouverture</h3>
                     <p>
-                        Pour terminer, j'ai fait plusieurs petits ajustements : j'ai <span>corrigé</span> ce qui ne fonctionnait pas et j'ai ajouté un
-                        <span>modèle 3D</span>. Cette étape a servi à peaufiner l'ensemble avant de présenter le projet.
+                        La boutique n'a pas encore de <span>produits réels en vente</span> : j'ai donc repris le site page par page, corrigé ce qui bougeait mal
+                        d'un écran à l'autre, ajusté les espacements et la typographie, et vérifié que chaque fonctionnalité répond — navigation, filtres, ajout au
+                        panier, formulaires. C'est la passe où l'on trouve les détails qu'on ne voit plus en construisant.
                     </p>
                     <div class="media">
                         <img src="assets/images/projet1fin.png" alt="" />
@@ -186,24 +246,15 @@
             <div class="cards">
                 <div class="card">
                     <h2>Défis</h2>
-                    <p>
-                        Le plus gros défi a été de tout <span>convertir en PHP</span>. C'était long, et il fallait penser à mettre chaque élément en
-                        <span>dynamique</span>, sans laisser de texte écrit à la main dans les pages.
-                    </p>
+                    <p>Personnaliser un thème <span>WooCommerce</span> générique pour qu’il ait vraiment l’air d’une <span>boutique de luxe</span>.</p>
                 </div>
                 <div class="card">
                     <h2>Solutions</h2>
-                    <p>
-                        J'ai converti les pages <span>une par une</span> et je les ai comparées à mes champs ACF pour m'assurer que chaque contenu venait bien de
-                        l'administration.
-                    </p>
+                    <p>Écriture de <span>CSS additionnel</span> pour retravailler les espacements, les boutons et les mises en pages.</p>
                 </div>
                 <div class="card">
                     <h2>Apprentissage</h2>
-                    <p>
-                        J'ai appris à bien <span>travailler en équipe</span>. Nous nous sommes séparé les tâches de façon claire, donc chacun savait quoi faire et
-                        tout avançait très vite.
-                    </p>
+                    <p>Une meilleure compréhension du fonctionnement de <span>WooCommerce</span> et de <span>Wordpress</span>.</p>
                 </div>
             </div>
         </div>
@@ -213,12 +264,12 @@
     <section class="suivant">
         <div class="wrapper">
             <div class="gauche">
-                <p class="surtitre">CLIP SUIVANT 02 / 05</p>
-                <h2>CLIP MUSICAL</h2>
-                <p>Montage vidéo et synchronisation audio</p>
+                <p class="surtitre">CLIP SUIVANT 04 / 05</p>
+                <h2>Virage extrême</h2>
+                <p>Montage vidéo</p>
             </div>
             <div class="droite">
-                <a href="fiche2.html" class="bouton">VOIR LE PROJET</a>
+                <a href="fiche4.html" class="bouton">VOIR LE PROJET</a>
             </div>
         </div>
     </section>

@@ -4,7 +4,24 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Miro Leblanc</title>
+    <title>Virage extrême — Miro Leblanc</title>
+    <meta name="description" content="Virage extrême : montage
+promotionnel de 30 secondes mélangeant parachutisme, karting et aviron pour une émission de sports extrêmes." />
+    <meta name="theme-color" content="#0E0B0A" />
+
+    <link rel="icon" type="image/png" href="assets/icons/favicon.png" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="fr_CA" />
+    <meta property="og:site_name" content="Miro Leblanc" />
+    <meta property="og:title" content="Virage extrême — Miro Leblanc" />
+    <meta property="og:description" content="Virage extrême : montage
+promotionnel de 30 secondes mélangeant parachutisme, karting et aviron pour une émission de sports extrêmes." />
+    <meta property="og:url" content="https://miroleblanc.github.io/fiche4.html" />
+    <meta property="og:image" content="https://miroleblanc.github.io/assets/og/fiche4.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,6 +30,17 @@
     <link rel="stylesheet" href="styles/main.css" />
 
     <script src="scripts/main.js" defer></script>
+    <script>
+        try {
+            var clap = JSON.parse(sessionStorage.getItem('clap'));
+            if (clap) {
+                sessionStorage.removeItem('clap');
+                document.documentElement.classList.add('clap-ferme');
+                document.documentElement.style.setProperty('--clap-titre', JSON.stringify(clap.titre));
+                document.documentElement.style.setProperty('--clap-scene', JSON.stringify(clap.scene));
+            }
+        } catch (e) {}
+    </script>
 </head>
 
 <body data-component="Scrolly">
@@ -20,12 +48,35 @@
         <div class="curseur__rond"></div>
     </div>
 
+    <div class="clap-transition" data-component="Transition" aria-hidden="true">
+        <div class="clap-transition__haut"></div>
+        <div class="clap-transition__bas">
+            <div class="clap-transition__ardoise">
+                <div class="clap-transition__ligne">
+                    <p>Prod. Miro Leblanc</p>
+                    <p>Prise 01</p>
+                </div>
+                <p class="clap-transition__titre"></p>
+                <div class="clap-transition__ligne">
+                    <p class="clap-transition__scene"></p>
+                    <p>Intégration multimédia</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Header -->
     <header class="header" data-component="Header">
         <nav class="nav">
             <a href="index.html" class="logo"><img src="assets/images/logo.png" alt="Miro Leblanc — accueil"></a>
 
-            <ul class="nav__list">
+            <button class="nav__toggle js-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu">
+                <svg class="icon">
+                    <use href="#icon-menu"></use>
+                </svg>
+            </button>
+
+            <ul class="nav__list" id="menu">
                 <li class="nav__item"><a href="index.html#about" class="nav__link"><span class="nav__label">À propos</span><svg class="icon">
                             <use href="#icon-about"></use>
                         </svg></a></li>
@@ -35,10 +86,10 @@
                 <li class="nav__item"><a href="index.html#contact" class="nav__link"><span class="nav__label">Contact</span><svg class="icon">
                             <use href="#icon-contact"></use>
                         </svg></a></li>
-                <li class="nav__item nav__item__icon"><a href="https://www.linkedin.com/in/miro-leblanc-4770b6442/?isSelfProfile=true" class="nav__link" target="_blank" rel="noopener"><span class="nav__label">LinkedIn</span><svg class="icon">
+                <li class="nav__item nav__item__icon"><a href="https://www.linkedin.com/in/miro-leblanc-4770b6442" class="nav__link" target="_blank" rel="noopener"><span class="nav__label">LinkedIn</span><svg class="icon">
                             <use href="#icon-linkedin"></use>
                         </svg></a></li>
-                <li class="nav__item nav__item__icon"><a href="https://www.youtube.com/watch?v=EKptf4xbqX8" class="nav__link" target="_blank" rel="noopener"><span class="nav__label">YouTube</span><svg class="icon">
+                <li class="nav__item nav__item__icon"><a href="https://www.youtube.com/@MiroLeBlanc" class="nav__link" target="_blank" rel="noopener"><span class="nav__label">YouTube</span><svg class="icon">
                             <use href="#icon-youtube"></use>
                         </svg></a></li>
                 <li class="nav__item nav__item__icon"><a href="" class="nav__link" target="_blank" rel="noopener"><span class="nav__label">GitHub</span><svg class="icon">
@@ -52,6 +103,10 @@
     </header>
 
     <section class="hero">
+        <div class="hero__media">
+            <video src="assets/videos/projet4.mp4" autoplay muted loop playsinline></video>
+        </div>
+
         <div class="wrapper">
             <div class="gauche">
                 <p class="surtitre">CLIP 04 / 05</p>
@@ -71,7 +126,7 @@
                     Un montage de 30 secondes mélangeant parachutisme, karting et aviron, fait à partir de clips fournis pour une <span>émission</span> de sports
                     extrêmes.
                 </p>
-                <a href="" class="bouton" target="_blank" rel="noopener">VOIR LE SITE WEB</a>
+                <a href="#video" class="bouton">VOIR LA VIDÉO</a>
             </div>
 
             <div class="droite">
@@ -118,15 +173,7 @@
                         d'une chanson dont le rythme convient à un montage dynamique de 30 secondes.
                     </p>
                     <div class="media">
-                        <img src="assets/images/projet1style.png" alt="" />
-                        <div class="palette">
-                            <div class="couleur couleur1"></div>
-                            <div class="couleur couleur2"></div>
-                            <div class="couleur couleur3"></div>
-                            <div class="couleur couleur4"></div>
-                            <div class="couleur couleur5"></div>
-                            <div class="couleur couleur6"></div>
-                        </div>
+                        <img src="assets/images/virage1.png" alt="" />
                     </div>
                 </div>
 
@@ -138,7 +185,7 @@
                         rythme soutenu malgré les sports très différents présentés.
                     </p>
                     <div class="media">
-                        <img src="assets/images/projet1woo.png" alt="" />
+                        <img src="assets/images/virage3.png" alt="" />
                     </div>
                 </div>
 
@@ -150,7 +197,7 @@
                         filmés.
                     </p>
                     <div class="media">
-                        <img src="assets/images/projet1blocs.png" alt="" />
+                        <img src="assets/images/virage2.png" alt="" />
                     </div>
                 </div>
 
@@ -162,8 +209,7 @@
                         l'émission et mon nom.
                     </p>
                     <div class="media">
-                        <img src="assets/images/projet1css.png" alt="" />
-                        <img src="assets/images/projet1responsive.png" alt="" />
+                        <img src="assets/images/virage4.png" alt="" />
                     </div>
                 </div>
 
@@ -175,10 +221,23 @@
                         rythmé du début à la fin, malgré la diversité des sports montrés.
                     </p>
                     <div class="media">
-                        <img src="assets/images/projet1fin.png" alt="" />
-                        <a href="https://chromevaults.com" class="bouton" target="_blank" rel="noopener">VOIR LE SITE EN LIGNE</a>
+                        <img src="assets/images/virage5.png" alt="" />
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="titre_video" id="video">
+        <div class="wrapper">
+            <h2>Résultat</h2>
+        </div>
+    </div>
+
+    <section class="video_fiche" data-component="PleinEcran">
+        <div class="wrapper">
+            <div class="video" data-component="YouTube" data-video-id="SzZyzZ5PZ4A">
+                <div class="js-video"></div>
             </div>
         </div>
     </section>
