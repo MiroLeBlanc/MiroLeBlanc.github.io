@@ -9,7 +9,8 @@
 complet d'une invention fictive, administrable avec des types de contenus personnalisés et des champs ACF." />
     <meta name="theme-color" content="#0E0B0A" />
 
-    <link rel="icon" type="image/png" href="assets/icons/favicon.png" />
+    <link rel="icon" type="image/png" sizes="256x256" href="assets/icons/favicon.png" />
+    <link rel="icon" type="image/svg+xml" href="assets/icons/logo.svg" />
 
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="fr_CA" />
@@ -68,7 +69,10 @@ complet d'une invention fictive, administrable avec des types de contenus person
     <!-- Header -->
     <header class="header" data-component="Header">
         <nav class="nav">
-            <a href="index.html" class="logo"><img src="assets/images/logo.png" alt="Miro Leblanc — accueil"></a>
+            <a href="index.html" class="logo" aria-label="Miro Leblanc — accueil"><svg class="icon" aria-hidden="true">
+                    <use class="logo__echo" href="#icon-logo"></use>
+                    <use href="#icon-logo"></use>
+                </svg></a>
 
             <button class="nav__toggle js-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu">
                 <svg class="icon">
@@ -103,11 +107,9 @@ complet d'une invention fictive, administrable avec des types de contenus person
     </header>
 
     <section class="hero">
-        <!-- TODO : vidéo de Q-tipousse. Ajouter ici :
-    <div class="hero__media">
-        <video src="assets/videos/NOM-DE-LA-VIDEO.mp4" autoplay muted loop playsinline></video>
-    </div>
-    (projet1.mp4 est la vidéo de ChromeVault) -->
+        <div class="hero__media">
+            <video src="assets/videos/projet3.mp4" autoplay muted loop playsinline></video>
+        </div>
 
         <div class="wrapper">
             <div class="gauche">

@@ -5,16 +5,19 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Miro Leblanc — Développeur web et monteur vidéo</title>
-    <meta name="description" content="Portfolio de Miro Leblanc, étudiant en intégration multimédia au Cégep Édouard-Montpetit. Développement web et montage vidéo, à la recherche d'un stage." />
+    <meta name="description" content="Portfolio de Miro Leblanc, étudiant en
+intégration multimédia au Cégep Édouard-Montpetit. Développement web et montage vidéo, à la recherche d'un stage." />
     <meta name="theme-color" content="#0E0B0A" />
 
-    <link rel="icon" type="image/png" href="assets/icons/favicon.png" />
+    <link rel="icon" type="image/png" sizes="256x256" href="assets/icons/favicon.png" />
+    <link rel="icon" type="image/svg+xml" href="assets/icons/logo.svg" />
 
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="fr_CA" />
     <meta property="og:site_name" content="Miro Leblanc" />
     <meta property="og:title" content="Miro Leblanc — Développeur web et monteur vidéo" />
-    <meta property="og:description" content="Portfolio de Miro Leblanc, étudiant en intégration multimédia au Cégep Édouard-Montpetit. Développement web et montage vidéo, à la recherche d'un stage." />
+    <meta property="og:description" content="Portfolio de Miro Leblanc, étudiant en
+intégration multimédia au Cégep Édouard-Montpetit. Développement web et montage vidéo, à la recherche d'un stage." />
     <meta property="og:url" content="https://miroleblanc.github.io/" />
     <meta property="og:image" content="https://miroleblanc.github.io/assets/og/index.jpg" />
     <meta property="og:image:width" content="1200" />
@@ -66,7 +69,10 @@
     <!-- Header -->
     <header class="header" data-component="Header">
         <nav class="nav">
-            <a href="index.html" class="logo"><img src="assets/images/logo.png" alt="Miro Leblanc — accueil"></a>
+            <a href="index.html" class="logo" aria-label="Miro Leblanc — accueil"><svg class="icon" aria-hidden="true">
+                    <use class="logo__echo" href="#icon-logo"></use>
+                    <use href="#icon-logo"></use>
+                </svg></a>
 
             <button class="nav__toggle js-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu">
                 <svg class="icon">
@@ -310,9 +316,9 @@
             <canvas class="projets__grille" data-component="GridScan"></canvas>
             <div class="wrapper">
                 <h3 data-scrolly="titre">Projets</h3>
-                <div class="projets__scene">
+                <div class="projets__scene" data-component="ChargementVideos">
                     <a href="fiche1.html" class="card js-card">
-                        <div class="card__media"><video src="assets/videos/projet1.mp4" autoplay muted loop playsinline></video></div>
+                        <div class="card__media"><video data-src="assets/videos/projet3.mp4" preload="none" autoplay muted loop playsinline></video></div>
                         <div class="card__content">
                             <div class="top">
                                 <p>PROJET 01 / 05</p>
@@ -326,7 +332,7 @@
                     </a>
 
                     <a href="fiche2.html" class="card js-card">
-                        <div class="card__media"><video src="assets/videos/projet2.mp4" autoplay muted loop playsinline></video></div>
+                        <div class="card__media"><video data-src="assets/videos/projet2.mp4" preload="none" autoplay muted loop playsinline></video></div>
                         <div class="card__content">
                             <div class="top">
                                 <p>PROJET 02 / 05</p>
@@ -340,7 +346,7 @@
                     </a>
 
                     <a href="fiche3.html" class="card js-card">
-                        <div class="card__media"><video src="assets/videos/projet1.mp4" autoplay muted loop playsinline></video></div>
+                        <div class="card__media"><video data-src="assets/videos/projet1.mp4" preload="none" autoplay muted loop playsinline></video></div>
                         <div class="card__content">
                             <div class="top">
                                 <p>PROJET 03 / 05</p>
@@ -354,7 +360,7 @@
                     </a>
 
                     <a href="fiche4.html" class="card js-card">
-                        <div class="card__media"><video src="assets/videos/projet4.mp4" autoplay muted loop playsinline></video></div>
+                        <div class="card__media"><video data-src="assets/videos/projet4.mp4" preload="none" autoplay muted loop playsinline></video></div>
                         <div class="card__content">
                             <div class="top">
                                 <p>PROJET 04 / 05</p>
@@ -368,7 +374,7 @@
                     </a>
 
                     <a href="fiche5.html" class="card js-card">
-                        <div class="card__media"><video src="assets/videos/projet5.mp4" autoplay muted loop playsinline></video></div>
+                        <div class="card__media"><video data-src="assets/videos/projet5.mp4" preload="none" autoplay muted loop playsinline></video></div>
                         <div class="card__content">
                             <div class="top">
                                 <p>PROJET 05 / 05</p>

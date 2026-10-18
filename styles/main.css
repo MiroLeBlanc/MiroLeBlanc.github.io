@@ -1229,17 +1229,67 @@ button:focus-visible {
 .header .logo {
   position: relative;
   z-index: 2;
-  pointer-events: auto;
-}
-.header .logo img {
-  width: 90px;
+  isolation: isolate;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 75px;
   margin: 10px;
+  padding: 0 10px;
+  border-radius: 8px;
+  background-color: var(--color-surface);
+  color: var(--color-neutre);
+  pointer-events: auto;
+  transition: color 0.3s ease;
 }
-@media (max-width: 768px) {
-  .header .logo img {
-    width: 64px;
-    margin: 16px 12px;
+@media (max-width: 1024px) {
+  .header .logo {
+    height: 56px;
+    padding: 0 12px;
   }
+}
+.header .logo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-color: var(--color-red);
+  scale: 0 1;
+  transform-origin: left;
+  transition: scale 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.header .logo .icon {
+  display: block;
+  overflow: visible;
+  width: 88px;
+  height: 40px;
+  transition: transform 0.45s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+@media (max-width: 1024px) {
+  .header .logo .icon {
+    width: 70px;
+    height: 32px;
+  }
+}
+.header .logo .logo__echo {
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.header .logo:hover, .header .logo:focus-visible {
+  color: var(--color-bg-primary);
+  text-decoration: none;
+}
+.header .logo:hover::before, .header .logo:focus-visible::before {
+  scale: 1 1;
+}
+.header .logo:hover .icon, .header .logo:focus-visible .icon {
+  transform: translateX(3px) skewX(-8deg);
+}
+.header .logo:hover .logo__echo, .header .logo:focus-visible .logo__echo {
+  color: var(--color-neutre);
+  opacity: 0.35;
+  transform: translateX(-10px);
 }
 
 .nav-is-compact .header .nav .nav__list .nav__label {
