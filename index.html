@@ -96,10 +96,10 @@ intégration multimédia au Cégep Édouard-Montpetit. Développement web et mon
                 <li class="nav__item nav__item__icon"><a href="https://www.youtube.com/@MiroLeBlanc" class="nav__link" target="_blank" rel="noopener"><span class="nav__label">YouTube</span><svg class="icon">
                             <use href="#icon-youtube"></use>
                         </svg></a></li>
-                <li class="nav__item nav__item__icon"><a href="" class="nav__link" target="_blank" rel="noopener"><span class="nav__label">GitHub</span><svg class="icon">
+                <li class="nav__item nav__item__icon"><a href="https://github.com/MiroLeBlanc" class="nav__link" target="_blank" rel="noopener"><span class="nav__label">GitHub</span><svg class="icon">
                             <use href="#icon-github"></use>
                         </svg></a></li>
-                <li class="nav__item nav__item__icon"><a href="#" class="nav__link" target="_blank" rel="noopener"><svg class="icon">
+                <li class="nav__item nav__item__icon"><a href="#" class="nav__link" target="_blank" rel="noopener"><span class="nav__label">Curriculum vitae</span><svg class="icon">
                             <use href="#icon-cv"></use>
                         </svg></a></li>
             </ul>
@@ -108,7 +108,7 @@ intégration multimédia au Cégep Édouard-Montpetit. Développement web et mon
 
     <section class="hub">
         <div class="hub__media">
-            <video src="assets/videos/hub.mp4" autoplay muted loop playsinline></video>
+            <video src="assets/videos/hub.mp4" poster="assets/images/affiche-hub.webp" autoplay muted loop playsinline></video>
         </div>
 
         <div class="wrapper" data-scrolly="generique">
@@ -141,175 +141,179 @@ intégration multimédia au Cégep Édouard-Montpetit. Développement web et mon
         </div>
     </section>
 
-    <section class="about" id="about">
-        <div class="wrapper">
-            <h2 data-scrolly="titre">À propos</h2>
-            <div class="content">
-                <figure class="portrait" data-scrolly="portrait">
-                    <div class="portrait__cadre">
-                        <img src="assets/images/profil.png" alt="Portrait de Miro Leblanc" />
+    <div class="apropos">
+        <canvas class="apropos__grille" data-component="CursorGrid" aria-hidden="true"></canvas>
+
+        <section class="about" id="about">
+            <div class="wrapper">
+                <h2 data-scrolly="titre">À propos</h2>
+                <div class="content">
+                    <figure class="portrait" data-scrolly="portrait">
+                        <div class="portrait__cadre">
+                            <img src="assets/images/profil.webp" alt="Portrait de Miro Leblanc" width="600" height="800" loading="lazy" decoding="async" />
+                        </div>
+                        <figcaption>
+                            <span>Still 001</span>
+                            <span>f/1.8 · 50mm</span>
+                        </figcaption>
+                    </figure>
+
+                    <div class="droite">
+                        <p data-scrolly="fondu">
+                            <span>Développeur web</span> et <span>monteur vidéo</span>, avec un vrai bagage en <span>vente</span>.<br />Je construis des choses qui
+                            fonctionnent, qui racontent quelque chose, et qui finissent par convaincre — pas juste par bien paraître.
+                        </p>
+
+                        <div class="video" data-component="YouTube" data-scrolly="ecran" data-video-id="EKptf4xbqX8">
+                            <div class="js-video"></div>
+                        </div>
                     </div>
-                    <figcaption>
-                        <span>Still 001</span>
-                        <span>f/1.8 · 50mm</span>
-                    </figcaption>
-                </figure>
+                </div>
+            </div>
+        </section>
 
-                <div class="droite">
-                    <p data-scrolly="fondu">
-                        <span>Développeur web</span> et <span>monteur vidéo</span>, avec un vrai bagage en <span>vente</span>.<br />Je construis des choses qui
-                        fonctionnent, qui racontent quelque chose, et qui finissent par convaincre — pas juste par bien paraître.
-                    </p>
-
-                    <div class="video" data-component="YouTube" data-scrolly="ecran" data-video-id="EKptf4xbqX8">
-                        <div class="js-video"></div>
+        <section class="competences">
+            <div class="wrapper">
+                <h3 data-scrolly="titre">Compétences</h3>
+                <div class="content">
+                    <div class="card" data-scrolly="jauge">
+                        <p class="competence">Montage vidéo</p>
+                        <div class="barre"><span class="remplissage" style="width: 95%"></span></div>
+                        <p class="pourcentage">00:95 %</p>
+                    </div>
+                    <div class="card" data-scrolly="jauge">
+                        <p class="competence">Développement web</p>
+                        <div class="barre"><span class="remplissage" style="width: 85%"></span></div>
+                        <p class="pourcentage">00:85 %</p>
+                    </div>
+                    <div class="card" data-scrolly="jauge">
+                        <p class="competence">Design graphique</p>
+                        <div class="barre"><span class="remplissage" style="width: 75%"></span></div>
+                        <p class="pourcentage">00:75 %</p>
+                    </div>
+                    <div class="card" data-scrolly="jauge">
+                        <p class="competence">Animation 2D/3D</p>
+                        <div class="barre"><span class="remplissage" style="width: 80%"></span></div>
+                        <p class="pourcentage">00:80 %</p>
+                    </div>
+                    <div class="card" data-scrolly="jauge">
+                        <p class="competence">Programmation</p>
+                        <div class="barre"><span class="remplissage" style="width: 80%"></span></div>
+                        <p class="pourcentage">00:80 %</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="competences">
-        <div class="wrapper">
-            <h3 data-scrolly="titre">Compétences</h3>
-            <div class="content">
-                <div class="card" data-scrolly="jauge">
-                    <p class="competence">Montage vidéo</p>
-                    <div class="barre"><span class="remplissage" style="width: 95%"></span></div>
-                    <p class="pourcentage">00:95 %</p>
-                </div>
-                <div class="card" data-scrolly="jauge">
-                    <p class="competence">Développement web</p>
-                    <div class="barre"><span class="remplissage" style="width: 85%"></span></div>
-                    <p class="pourcentage">00:85 %</p>
-                </div>
-                <div class="card" data-scrolly="jauge">
-                    <p class="competence">Design graphique</p>
-                    <div class="barre"><span class="remplissage" style="width: 75%"></span></div>
-                    <p class="pourcentage">00:75 %</p>
-                </div>
-                <div class="card" data-scrolly="jauge">
-                    <p class="competence">Animation 2D/3D</p>
-                    <div class="barre"><span class="remplissage" style="width: 80%"></span></div>
-                    <p class="pourcentage">00:80 %</p>
-                </div>
-                <div class="card" data-scrolly="jauge">
-                    <p class="competence">Programmation</p>
-                    <div class="barre"><span class="remplissage" style="width: 80%"></span></div>
-                    <p class="pourcentage">00:80 %</p>
+        <section class="logiciels">
+            <div class="wrapper">
+                <h3 data-scrolly="titre">Logiciels</h3>
+                <div class="cards" data-scrolly="cascade">
+                    <div class="card">
+                        <img src="assets/images/davinci.png" alt="DaVinci Resolve" />
+                        <p class="nom">DaVinci Resolve</p>
+                        <p>Montage</p>
+                    </div>
+                    <div class="card">
+                        <img src="assets/images/after.png" alt="After Effects" />
+                        <p class="nom">After Effects</p>
+                        <p>Motion</p>
+                    </div>
+                    <div class="card">
+                        <img src="assets/images/premier.png" alt="Premiere Pro" />
+                        <p class="nom">Premiere Pro</p>
+                        <p>Montage</p>
+                    </div>
+                    <div class="card">
+                        <img src="assets/images/figma.png" alt="Figma" />
+                        <p class="nom">Figma</p>
+                        <p>Design</p>
+                    </div>
+                    <div class="card">
+                        <img src="assets/images/vscode.png" alt="Visual Studio Code" />
+                        <p class="nom">Visual Studio</p>
+                        <p>Code</p>
+                    </div>
+                    <div class="card">
+                        <img src="assets/images/blender.png" alt="Blender" />
+                        <p class="nom">Blender</p>
+                        <p>3D</p>
+                    </div>
+                    <div class="card">
+                        <img src="assets/images/wordpress.png" alt="WordPress" />
+                        <p class="nom">WordPress</p>
+                        <p>Intégration</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="logiciels">
-        <div class="wrapper">
-            <h3 data-scrolly="titre">Logiciels</h3>
-            <div class="cards" data-scrolly="cascade">
-                <div class="card">
-                    <img src="assets/images/davinci.png" alt="" />
-                    <p class="nom">DaVinci Resolve</p>
-                    <p>Montage</p>
-                </div>
-                <div class="card">
-                    <img src="assets/images/after.png" alt="" />
-                    <p class="nom">After Effects</p>
-                    <p>Motion</p>
-                </div>
-                <div class="card">
-                    <img src="assets/images/premier.png" alt="" />
-                    <p class="nom">Premiere Pro</p>
-                    <p>Montage</p>
-                </div>
-                <div class="card">
-                    <img src="assets/images/figma.png" alt="" />
-                    <p class="nom">Figma</p>
-                    <p>Design</p>
-                </div>
-                <div class="card">
-                    <img src="assets/images/vscode.png" alt="" />
-                    <p class="nom">Visual Studio</p>
-                    <p>Code</p>
-                </div>
-                <div class="card">
-                    <img src="assets/images/blender.png" alt="" />
-                    <p class="nom">Blender</p>
-                    <p>3D</p>
-                </div>
-                <div class="card">
-                    <img src="assets/images/wordpress.png" alt="" />
-                    <p class="nom">WordPress</p>
-                    <p>Intégration</p>
+        <section class="qualites">
+            <div class="wrapper">
+                <h3 data-scrolly="titre">Qualités humaines</h3>
+                <ul class="content" data-scrolly="tampons">
+                    <li>Créatif</li>
+                    <li>Compétitif</li>
+                    <li>Persévérant</li>
+                    <li>Sociable</li>
+                    <li>Vendeur</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="passions">
+            <div class="wrapper">
+                <h3 data-scrolly="titre">Passions et intérêts</h3>
+                <div class="cards" data-scrolly="pellicule">
+                    <div class="card">
+                        <img src="assets/images/basket.webp" alt="BasketBall" />
+                        <p>Basketball</p>
+                    </div>
+                    <div class="card">
+                        <img src="assets/images/snow.webp" alt="Snowboard" />
+                        <p>Snowboard</p>
+                    </div>
+                    <div class="card">
+                        <img src="assets/images/show.webp" alt="Concert" />
+                        <p>Concert/Musique</p>
+                    </div>
+                    <div class="card">
+                        <img src="assets/images/gym.webp" alt="Musculation" />
+                        <p>Musculation</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="qualites">
-        <div class="wrapper">
-            <h3 data-scrolly="titre">Qualités humaines</h3>
-            <ul class="content" data-scrolly="tampons">
-                <li>Créatif</li>
-                <li>Compétitif</li>
-                <li>Persévérant</li>
-                <li>Sociable</li>
-                <li>Vendeur</li>
-            </ul>
-        </div>
-    </section>
-
-    <section class="passions">
-        <div class="wrapper">
-            <h3 data-scrolly="titre">Passions et intérêts</h3>
-            <div class="cards" data-scrolly="pellicule">
-                <div class="card">
-                    <img src="assets/images/basket.png" alt="" />
-                    <p>Basketball</p>
-                </div>
-                <div class="card">
-                    <img src="assets/images/snow.png" alt="" />
-                    <p>Snowboard</p>
-                </div>
-                <div class="card">
-                    <img src="assets/images/show.png" alt="" />
-                    <p>Concert/Musique</p>
-                </div>
-                <div class="card">
-                    <img src="assets/images/gym.png" alt="" />
-                    <p>Musculation</p>
+        <section class="prix">
+            <div class="wrapper">
+                <h3 data-scrolly="titre">Prix et distinctions</h3>
+                <div class="cards" data-scrolly="bandeau">
+                    <div class="card">
+                        <svg class="icon">
+                            <use href="#icon-prix"></use>
+                        </svg>
+                        <p>2025</p>
+                        <h4>Gagnant de la bourse à la persévérance scolaire Desjardins</h4>
+                    </div>
+                    <div class="card">
+                        <svg class="icon">
+                            <use href="#icon-prix"></use>
+                        </svg>
+                        <p>2026</p>
+                        <h4>Gagnant de tous les concours de vente de l'année à Oberson</h4>
+                    </div>
+                    <div class="card">
+                        <svg class="icon">
+                            <use href="#icon-prix"></use>
+                        </svg>
+                        <p>2026</p>
+                        <h4>Prix du meilleur site web au Webjam</h4>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section class="prix">
-        <div class="wrapper">
-            <h3 data-scrolly="titre">Prix et distinctions</h3>
-            <div class="cards" data-scrolly="bandeau">
-                <div class="card">
-                    <svg class="icon">
-                        <use href="#icon-prix"></use>
-                    </svg>
-                    <p>2025</p>
-                    <h4>Gagnant de la bourse à la persévérance scolaire Desjardins</h4>
-                </div>
-                <div class="card">
-                    <svg class="icon">
-                        <use href="#icon-prix"></use>
-                    </svg>
-                    <p>2026</p>
-                    <h4>Gagnant de tous les concours de vente de l'année à Oberson</h4>
-                </div>
-                <div class="card">
-                    <svg class="icon">
-                        <use href="#icon-prix"></use>
-                    </svg>
-                    <p>2026</p>
-                    <h4>Prix du meilleur site web au Webjam</h4>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
+    </div>
 
     <section class="projets" id="projets" data-component="Projets">
         <div class="projets__stage">
@@ -318,7 +322,7 @@ intégration multimédia au Cégep Édouard-Montpetit. Développement web et mon
                 <h3 data-scrolly="titre">Projets</h3>
                 <div class="projets__scene" data-component="ChargementVideos">
                     <a href="fiche1.html" class="card js-card">
-                        <div class="card__media"><video data-src="assets/videos/projet3.mp4" preload="none" autoplay muted loop playsinline></video></div>
+                        <div class="card__media"><video data-src="assets/videos/projet3.mp4" data-poster="assets/images/affiche-projet3.webp" preload="none" autoplay muted loop playsinline></video></div>
                         <div class="card__content">
                             <div class="top">
                                 <p>PROJET 01 / 05</p>
@@ -332,7 +336,7 @@ intégration multimédia au Cégep Édouard-Montpetit. Développement web et mon
                     </a>
 
                     <a href="fiche2.html" class="card js-card">
-                        <div class="card__media"><video data-src="assets/videos/projet2.mp4" preload="none" autoplay muted loop playsinline></video></div>
+                        <div class="card__media"><video data-src="assets/videos/projet2.mp4" data-poster="assets/images/affiche-projet2.webp" preload="none" autoplay muted loop playsinline></video></div>
                         <div class="card__content">
                             <div class="top">
                                 <p>PROJET 02 / 05</p>
@@ -346,7 +350,7 @@ intégration multimédia au Cégep Édouard-Montpetit. Développement web et mon
                     </a>
 
                     <a href="fiche3.html" class="card js-card">
-                        <div class="card__media"><video data-src="assets/videos/projet1.mp4" preload="none" autoplay muted loop playsinline></video></div>
+                        <div class="card__media"><video data-src="assets/videos/projet1.mp4" data-poster="assets/images/affiche-projet1.webp" preload="none" autoplay muted loop playsinline></video></div>
                         <div class="card__content">
                             <div class="top">
                                 <p>PROJET 03 / 05</p>
@@ -360,7 +364,7 @@ intégration multimédia au Cégep Édouard-Montpetit. Développement web et mon
                     </a>
 
                     <a href="fiche4.html" class="card js-card">
-                        <div class="card__media"><video data-src="assets/videos/projet4.mp4" preload="none" autoplay muted loop playsinline></video></div>
+                        <div class="card__media"><video data-src="assets/videos/projet4.mp4" data-poster="assets/images/affiche-projet4.webp" preload="none" autoplay muted loop playsinline></video></div>
                         <div class="card__content">
                             <div class="top">
                                 <p>PROJET 04 / 05</p>
@@ -374,7 +378,7 @@ intégration multimédia au Cégep Édouard-Montpetit. Développement web et mon
                     </a>
 
                     <a href="fiche5.html" class="card js-card">
-                        <div class="card__media"><video data-src="assets/videos/projet5.mp4" preload="none" autoplay muted loop playsinline></video></div>
+                        <div class="card__media"><video data-src="assets/videos/projet5.mp4" data-poster="assets/images/affiche-projet5.webp" preload="none" autoplay muted loop playsinline></video></div>
                         <div class="card__content">
                             <div class="top">
                                 <p>PROJET 05 / 05</p>
@@ -437,7 +441,7 @@ intégration multimédia au Cégep Édouard-Montpetit. Développement web et mon
                     <a href="tel:+15794212825">579-421-2825</a>
                 </li>
                 <li class="reseaux">
-                    <a href="" target="_blank" rel="noopener" aria-label="GitHub">
+                    <a href="https://github.com/MiroLeBlanc" target="_blank" rel="noopener" aria-label="GitHub">
                         <svg class="icon">
                             <use href="#icon-github"></use>
                         </svg>

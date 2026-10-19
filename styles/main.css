@@ -1319,6 +1319,22 @@ button:focus-visible {
   }
 }
 
+.apropos {
+  position: relative;
+  isolation: isolate;
+}
+
+.apropos__grille {
+  position: sticky;
+  top: 0;
+  z-index: -1;
+  display: block;
+  width: 100%;
+  height: 100vh;
+  margin-bottom: -100vh;
+  pointer-events: none;
+}
+
 .about {
   margin: 135px 0px;
 }
@@ -2120,17 +2136,23 @@ button:focus-visible {
   box-shadow: 0px 0px 20px 0px rgb(201, 67, 43);
   color: var(--color-neutre);
   text-decoration: none;
-  transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.45s cubic-bezier(0.19, 1, 0.22, 1), border-color 0.3s ease;
 }
 .projets .card:hover, .projets .card:focus-visible {
   color: var(--color-neutre);
   text-decoration: none;
-  box-shadow: 0px 0px 40px 6px rgb(201, 67, 43);
+  border-color: var(--color-red);
+  box-shadow: 0 0 0 2px var(--color-red), 0 0 50px 10px rgba(201, 67, 43, 0.9), 0 0 140px 40px rgba(201, 67, 43, 0.45);
+  animation: projets-lueur 2.4s ease-in-out 0.45s infinite;
 }
 .projets .card:hover .card__media img,
 .projets .card:hover .card__media video, .projets .card:focus-visible .card__media img,
 .projets .card:focus-visible .card__media video {
-  transform: scale(1.05);
+  transform: scale(1.08);
+  filter: brightness(1.05) saturate(1.1);
+}
+.projets .card:hover .card__content, .projets .card:focus-visible .card__content {
+  box-shadow: inset 0 0 80px rgba(201, 67, 43, 0.45);
 }
 .projets .card:focus-visible {
   outline-color: var(--color-red);
@@ -2147,7 +2169,8 @@ button:focus-visible {
   -o-object-fit: cover;
      object-fit: cover;
   display: block;
-  transition: transform 0.6s ease;
+  filter: brightness(0.8) saturate(0.85);
+  transition: transform 0.9s cubic-bezier(0.19, 1, 0.22, 1), filter 0.6s ease;
 }
 .projets .card__content {
   position: absolute;
@@ -2162,6 +2185,10 @@ button:focus-visible {
   .projets .card__content {
     padding: 10px 12px;
   }
+}
+.projets .card__content {
+  box-shadow: inset 0 0 0 rgba(201, 67, 43, 0);
+  transition: box-shadow 0.6s ease;
 }
 .projets .card__content .top {
   display: flex;
@@ -2264,6 +2291,9 @@ button:focus-visible {
   .has-js .projets .card.is-active {
     box-shadow: 0px 0px 40px 6px rgb(201, 67, 43);
   }
+  .has-js .projets .card:hover, .has-js .projets .card:focus-visible {
+    box-shadow: 0 0 0 2px var(--color-red), 0 0 50px 10px rgba(201, 67, 43, 0.9), 0 0 140px 40px rgba(201, 67, 43, 0.45);
+  }
   .has-js .projets .projets__hud {
     display: block;
     position: absolute;
@@ -2325,6 +2355,14 @@ button:focus-visible {
   .has-js .projets .projets__label {
     text-transform: uppercase;
     color: var(--color-texte-secondaire);
+  }
+}
+@keyframes projets-lueur {
+  0%, 100% {
+    box-shadow: 0 0 0 2px var(--color-red), 0 0 50px 10px rgba(201, 67, 43, 0.9), 0 0 140px 40px rgba(201, 67, 43, 0.45);
+  }
+  50% {
+    box-shadow: 0 0 0 2px var(--color-red), 0 0 70px 16px rgb(201, 67, 43), 0 0 190px 60px rgba(201, 67, 43, 0.55);
   }
 }
 .stage .wrapper {
@@ -4197,3 +4235,4 @@ button:focus-visible {
     rotate: 0deg;
   }
 }
+/*# sourceMappingURL=main.css.map */
