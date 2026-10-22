@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Déclaration IA — Miro Leblanc</title>
+    <meta name="description" content="Comment l'intelligence artificielle
+a été utilisée dans la réalisation du portfolio de Miro Leblanc." />
+    <meta name="theme-color" content="#0E0B0A" />
+
+    <link rel="icon" type="image/png" sizes="256x256" href="assets/icons/favicon.png" />
+    <link rel="icon" type="image/svg+xml" href="assets/icons/logo.svg" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="fr_CA" />
+    <meta property="og:site_name" content="Miro Leblanc" />
+    <meta property="og:title" content="Déclaration IA — Miro Leblanc" />
+    <meta property="og:description" content="Comment l'intelligence artificielle
+a été utilisée dans la réalisation du portfolio de Miro Leblanc." />
+    <meta property="og:url" content="https://miroleblanc.github.io/declaration-ia.html" />
+    <meta property="og:image" content="https://miroleblanc.github.io/assets/og/index.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/main.css" />
+
+    <script src="scripts/main.js" defer></script>
+    <script>
+        try {
+            var clap = JSON.parse(sessionStorage.getItem('clap'));
+            if (clap) {
+                sessionStorage.removeItem('clap');
+                document.documentElement.classList.add('clap-ferme');
+                document.documentElement.style.setProperty('--clap-titre', JSON.stringify(clap.titre));
+                document.documentElement.style.setProperty('--clap-scene', JSON.stringify(clap.scene));
+            }
+        } catch (e) {}
+    </script>
+</head>
+
+<body data-component="Scrolly">
+    <div class="curseur" data-component="Curseur" aria-hidden="true">
+        <div class="curseur__rond"></div>
+    </div>
+
+    <div class="clap-transition" data-component="Transition" aria-hidden="true">
+        <div class="clap-transition__haut"></div>
+        <div class="clap-transition__bas">
+            <div class="clap-transition__ardoise">
+                <div class="clap-transition__ligne">
+                    <p>Prod. Miro Leblanc</p>
+                    <p>Prise 01</p>
+                </div>
+                <p class="clap-transition__titre"></p>
+                <div class="clap-transition__ligne">
+                    <p class="clap-transition__scene"></p>
+                    <p>Intégration multimédia</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header" data-component="Header">
+        <nav class="nav">
+            <a href="index.html" class="logo" aria-label="Miro Leblanc — accueil"><svg class="icon" aria-hidden="true">
+                    <use class="logo__echo" href="#icon-logo"></use>
+                    <use href="#icon-logo"></use>
+                </svg></a>
+
+            <button class="nav__toggle js-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu">
+                <svg class="icon">
+                    <use href="#icon-menu"></use>
+                </svg>
+            </button>
+
+            <ul class="nav__list" id="menu">
+                <li class="nav__item"><a href="index.html#about" class="nav__link"><span class="nav__label">À propos</span><svg class="icon">
+                            <use href="#icon-about"></use>
+                        </svg></a></li>
+                <li class="nav__item"><a href="index.html#projets" class="nav__link"><span class="nav__label">Projets</span><svg class="icon">
+                            <use href="#icon-projets"></use>
+                        </svg></a></li>
+                <li class="nav__item"><a href="index.html#contact" class="nav__link"><span class="nav__label">Contact</span><svg class="icon">
+                            <use href="#icon-contact"></use>
+                        </svg></a></li>
+                <li class="nav__item nav__item__icon"><a href="https://www.linkedin.com/in/miro-leblanc-4770b6442" class="nav__link" target="_blank" rel="noopener"><span class="nav__label">LinkedIn</span><svg class="icon">
+                            <use href="#icon-linkedin"></use>
+                        </svg></a></li>
+                <li class="nav__item nav__item__icon"><a href="https://www.youtube.com/@MiroLeBlanc" class="nav__link" target="_blank" rel="noopener"><span class="nav__label">YouTube</span><svg class="icon">
+                            <use href="#icon-youtube"></use>
+                        </svg></a></li>
+                <li class="nav__item nav__item__icon"><a href="https://github.com/MiroLeBlanc" class="nav__link" target="_blank" rel="noopener"><span class="nav__label">GitHub</span><svg class="icon">
+                            <use href="#icon-github"></use>
+                        </svg></a></li>
+                <li class="nav__item nav__item__icon"><a href="#" class="nav__link" target="_blank" rel="noopener"><span class="nav__label">Curriculum vitae</span><svg class="icon">
+                            <use href="#icon-cv"></use>
+                        </svg></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="declaration">
+        <div class="wrapper">
+            <h1>Déclaration IA</h1>
+            <p class="intro">
+                Ce portfolio, c'est d'abord <span>mon travail</span> : la direction artistique, les maquettes, les montages vidéo et les projets. J'ai aussi utilisé
+                l'intelligence artificielle comme assistant pendant l'intégration. Voici où, et comment.
+            </p>
+            <p class="maj">Mise à jour · Octobre 2026</p>
+        </div>
+    </section>
+
+    <div class="clap"></div>
+
+    <section class="declaration__liste">
+        <div class="ligne">
+            <div class="wrapper">
+                <h2>Ma part</h2>
+                <p>
+                    J'ai conçu la <span>direction artistique</span> et les <span>maquettes</span> dans Figma, réalisé les <span>montages vidéo</span> et les projets
+                    présentés, écrit les textes de présentation, bâti la <span>structure du site</span> et de ses composantes, puis dirigé, choisi et testé chaque
+                    élément.
+                </p>
+            </div>
+        </div>
+
+        <div class="ligne">
+            <div class="wrapper">
+                <h2>Code</h2>
+                <p>
+                    Pour réaliser l'intégration du site, j'ai utilisé <span>Claude (Anthropic)</span> afin d'intégrer et de déboguer une partie des animations, du
+                    responsive et des fonctionnalités interactives. J'ai personnellement défini chaque fonctionnalité, accepté ou refusé les propositions et vérifié
+                    le rendu final.
+                </p>
+            </div>
+        </div>
+
+        <div class="ligne">
+            <div class="wrapper">
+                <h2>Médias</h2>
+                <p>
+                    Pour préparer les images et les vidéos, j'ai utilisé <span>Claude</span> afin de les convertir en formats plus légers. Les photos et les vidéos
+                    sont les miennes.
+                </p>
+            </div>
+        </div>
+
+        <div class="ligne">
+            <div class="wrapper">
+                <h2>Rétroaction</h2>
+                <p>
+                    Pour améliorer le site, j'ai utilisé <span>Claude</span> afin d'obtenir une liste de corrections et de rédiger quelques textes secondaires. J'ai
+                    choisi les améliorations à appliquer et révisé chaque texte.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contact -->
+    <footer class="footer" id="contact">
+        <div class="wrapper" data-scrolly="contact">
+            <div class="gauche">
+                <h2><span>Prêt à</span><br /><span>créer</span></h2>
+                <div class="boutons">
+                    <!-- TODO : lien vers le CV (PDF) -->
+                    <a href="#" class="bouton bouton--plein">Télécharger le CV</a>
+                    <a href="mailto:miroleblanc@gmail.com" class="bouton bouton--sombre">M'écrire</a>
+                </div>
+            </div>
+
+            <ul class="droite">
+                <li>
+                    <a href="mailto:miroleblanc@gmail.com" class="courriel" data-component="CopierCourriel">miroleblanc@gmail.com</a>
+                </li>
+                <li>
+                    <a href="tel:+15794212825">579-421-2825</a>
+                </li>
+                <li class="reseaux">
+                    <a href="https://github.com/MiroLeBlanc" target="_blank" rel="noopener" aria-label="GitHub">
+                        <svg class="icon">
+                            <use href="#icon-github"></use>
+                        </svg>
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=EKptf4xbqX8" target="_blank" rel="noopener" aria-label="YouTube">
+                        <svg class="icon">
+                            <use href="#icon-youtube"></use>
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/miro-leblanc-4770b6442/?isSelfProfile=true" target="_blank" rel="noopener" aria-label="LinkedIn">
+                        <svg class="icon">
+                            <use href="#icon-linkedin"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="declaration-ia.html" class="mentionia">
+                        <svg class="icon">
+                            <use href="#icon-ia"></use>
+                        </svg>
+                        Déclaration IA
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+
+</html>

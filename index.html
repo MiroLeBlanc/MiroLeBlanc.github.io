@@ -164,7 +164,7 @@ intégration multimédia au Cégep Édouard-Montpetit. Développement web et mon
                             fonctionnent, qui racontent quelque chose, et qui finissent par convaincre — pas juste par bien paraître.
                         </p>
 
-                        <div class="video" data-component="YouTube" data-scrolly="ecran" data-video-id="EKptf4xbqX8">
+                        <div class="video" data-component="YouTube" data-scrolly="ecran" data-video-id="ZZvbhgxUuc4">
                             <div class="js-video"></div>
                         </div>
                     </div>
@@ -175,7 +175,7 @@ intégration multimédia au Cégep Édouard-Montpetit. Développement web et mon
         <section class="competences">
             <div class="wrapper">
                 <h3 data-scrolly="titre">Compétences</h3>
-                <div class="content">
+                <div class="content" data-component="Timecode" data-mode="compteur">
                     <div class="card" data-scrolly="jauge">
                         <p class="competence">Montage vidéo</p>
                         <div class="barre"><span class="remplissage" style="width: 95%"></span></div>
@@ -289,26 +289,52 @@ intégration multimédia au Cégep Édouard-Montpetit. Développement web et mon
             <div class="wrapper">
                 <h3 data-scrolly="titre">Prix et distinctions</h3>
                 <div class="cards" data-scrolly="bandeau">
+                    <a href="fiche1.html" class="card card--vedette">
+                        <div class="card__media"><img src="assets/images/webjam5.webp" alt="" loading="lazy" decoding="async" /></div>
+                        <div class="laurier">
+                            <svg class="icon">
+                                <use href="#icon-laurier"></use>
+                            </svg>
+                            <div class="laurier__texte">
+                                <p class="laurier__haut">Gagnant · 2026</p>
+                                <h4>Meilleur site web</h4>
+                                <p class="laurier__bas">Au Webjam</p>
+                            </div>
+                            <svg class="icon laurier__droite">
+                                <use href="#icon-laurier"></use>
+                            </svg>
+                        </div>
+                        <p class="bouton">Voir le projet gagnant</p>
+                    </a>
                     <div class="card">
-                        <svg class="icon">
-                            <use href="#icon-prix"></use>
-                        </svg>
-                        <p>2025</p>
-                        <h4>Gagnant de la bourse à la persévérance scolaire Desjardins</h4>
+                        <div class="laurier">
+                            <svg class="icon">
+                                <use href="#icon-laurier"></use>
+                            </svg>
+                            <div class="laurier__texte">
+                                <p class="laurier__haut">Gagnant · 2026</p>
+                                <h4>Tous les concours de vente de l'année</h4>
+                                <p class="laurier__bas">Chez Oberson</p>
+                            </div>
+                            <svg class="icon laurier__droite">
+                                <use href="#icon-laurier"></use>
+                            </svg>
+                        </div>
                     </div>
                     <div class="card">
-                        <svg class="icon">
-                            <use href="#icon-prix"></use>
-                        </svg>
-                        <p>2026</p>
-                        <h4>Gagnant de tous les concours de vente de l'année à Oberson</h4>
-                    </div>
-                    <div class="card">
-                        <svg class="icon">
-                            <use href="#icon-prix"></use>
-                        </svg>
-                        <p>2026</p>
-                        <h4>Prix du meilleur site web au Webjam</h4>
+                        <div class="laurier">
+                            <svg class="icon">
+                                <use href="#icon-laurier"></use>
+                            </svg>
+                            <div class="laurier__texte">
+                                <p class="laurier__haut">Gagnant · 2025</p>
+                                <h4>Bourse à la persévérance scolaire</h4>
+                                <p class="laurier__bas">Desjardins</p>
+                            </div>
+                            <svg class="icon laurier__droite">
+                                <use href="#icon-laurier"></use>
+                            </svg>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -322,7 +348,9 @@ intégration multimédia au Cégep Édouard-Montpetit. Développement web et mon
                 <h3 data-scrolly="titre">Projets</h3>
                 <div class="projets__scene" data-component="ChargementVideos">
                     <a href="fiche1.html" class="card js-card">
-                        <div class="card__media"><video data-src="assets/videos/projet3.mp4" data-poster="assets/images/affiche-projet3.webp" preload="none" autoplay muted loop playsinline></video></div>
+                        <div class="card__media">
+                            <video data-src="assets/videos/projet3.mp4" data-poster="assets/images/affiche-projet3.webp" preload="none" autoplay muted loop playsinline></video>
+                        </div>
                         <div class="card__content">
                             <div class="top">
                                 <p>PROJET 01 / 05</p>
@@ -336,7 +364,9 @@ intégration multimédia au Cégep Édouard-Montpetit. Développement web et mon
                     </a>
 
                     <a href="fiche2.html" class="card js-card">
-                        <div class="card__media"><video data-src="assets/videos/projet2.mp4" data-poster="assets/images/affiche-projet2.webp" preload="none" autoplay muted loop playsinline></video></div>
+                        <div class="card__media">
+                            <video data-src="assets/videos/projet2.mp4" data-poster="assets/images/affiche-projet2.webp" preload="none" autoplay muted loop playsinline></video>
+                        </div>
                         <div class="card__content">
                             <div class="top">
                                 <p>PROJET 02 / 05</p>
@@ -350,7 +380,9 @@ intégration multimédia au Cégep Édouard-Montpetit. Développement web et mon
                     </a>
 
                     <a href="fiche3.html" class="card js-card">
-                        <div class="card__media"><video data-src="assets/videos/projet1.mp4" data-poster="assets/images/affiche-projet1.webp" preload="none" autoplay muted loop playsinline></video></div>
+                        <div class="card__media">
+                            <video data-src="assets/videos/projet1.mp4" data-poster="assets/images/affiche-projet1.webp" preload="none" autoplay muted loop playsinline></video>
+                        </div>
                         <div class="card__content">
                             <div class="top">
                                 <p>PROJET 03 / 05</p>
@@ -364,7 +396,9 @@ intégration multimédia au Cégep Édouard-Montpetit. Développement web et mon
                     </a>
 
                     <a href="fiche4.html" class="card js-card">
-                        <div class="card__media"><video data-src="assets/videos/projet4.mp4" data-poster="assets/images/affiche-projet4.webp" preload="none" autoplay muted loop playsinline></video></div>
+                        <div class="card__media">
+                            <video data-src="assets/videos/projet4.mp4" data-poster="assets/images/affiche-projet4.webp" preload="none" autoplay muted loop playsinline></video>
+                        </div>
                         <div class="card__content">
                             <div class="top">
                                 <p>PROJET 04 / 05</p>
@@ -378,7 +412,9 @@ intégration multimédia au Cégep Édouard-Montpetit. Développement web et mon
                     </a>
 
                     <a href="fiche5.html" class="card js-card">
-                        <div class="card__media"><video data-src="assets/videos/projet5.mp4" data-poster="assets/images/affiche-projet5.webp" preload="none" autoplay muted loop playsinline></video></div>
+                        <div class="card__media">
+                            <video data-src="assets/videos/projet5.mp4" data-poster="assets/images/affiche-projet5.webp" preload="none" autoplay muted loop playsinline></video>
+                        </div>
                         <div class="card__content">
                             <div class="top">
                                 <p>PROJET 05 / 05</p>
@@ -435,7 +471,7 @@ intégration multimédia au Cégep Édouard-Montpetit. Développement web et mon
 
             <ul class="droite">
                 <li>
-                    <a href="mailto:miroleblanc@gmail.com" class="courriel">miroleblanc@gmail.com</a>
+                    <a href="mailto:miroleblanc@gmail.com" class="courriel" data-component="CopierCourriel">miroleblanc@gmail.com</a>
                 </li>
                 <li>
                     <a href="tel:+15794212825">579-421-2825</a>
@@ -458,8 +494,7 @@ intégration multimédia au Cégep Édouard-Montpetit. Développement web et mon
                     </a>
                 </li>
                 <li>
-                    <!-- TODO : lien vers la page Déclaration IA -->
-                    <a href="#" class="mentionia">
+                    <a href="declaration-ia.html" class="mentionia">
                         <svg class="icon">
                             <use href="#icon-ia"></use>
                         </svg>
