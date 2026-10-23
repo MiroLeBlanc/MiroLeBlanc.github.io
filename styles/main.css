@@ -1159,6 +1159,7 @@ button:focus-visible {
   color: var(--color-neutre);
   width: 14px;
   height: 10px;
+  animation: hub-fleche 1.8s ease-in-out infinite;
 }
 @media (max-width: 768px) {
   .intro__bas .scroller .icon {
@@ -1450,6 +1451,7 @@ button:focus-visible {
   color: var(--color-neutre);
   width: 14px;
   height: 10px;
+  animation: hub-fleche 1.8s ease-in-out infinite;
 }
 @media (max-width: 768px) {
   .hub .scroller .icon {
@@ -1481,6 +1483,14 @@ button:focus-visible {
 @keyframes hub-rec {
   50% {
     opacity: 0;
+  }
+}
+@keyframes hub-fleche {
+  0%, 100% {
+    translate: 0 -1px;
+  }
+  50% {
+    translate: 0 3px;
   }
 }
 .header {
@@ -5212,4 +5222,3 @@ button:focus-visible {
     rotate: 0deg;
   }
 }
-/*# sourceMappingURL=main.css.map */
