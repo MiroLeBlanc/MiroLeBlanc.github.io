@@ -857,6 +857,9 @@ button:focus-visible {
 .intro-ouverte .intro {
   display: block;
 }
+.intro:focus {
+  outline: none;
+}
 .intro-ouverte:not(.has-js) .intro {
   animation: intro-secours 0s 6s forwards;
 }
@@ -1021,12 +1024,16 @@ button:focus-visible {
   pointer-events: auto;
 }
 .intro:not(.is-lance) .intro__rec:hover .intro__disque, .intro:not(.is-lance) .intro__rec:focus-visible .intro__disque {
-  scale: 1.08;
+  scale: 1.22;
   animation: none;
-  box-shadow: 0 0 0 10px rgba(201, 67, 43, 0.25), 0 0 50px rgba(201, 67, 43, 0.9);
+  box-shadow: 0 0 0 12px rgba(201, 67, 43, 0.3), 0 0 0 28px rgba(201, 67, 43, 0.12), 0 0 90px 14px rgba(201, 67, 43, 0.85);
 }
 .intro:not(.is-lance) .intro__rec:hover .intro__anneau, .intro:not(.is-lance) .intro__rec:focus-visible .intro__anneau {
   opacity: 1;
+  scale: 1.12;
+}
+.intro:not(.is-lance) .intro__rec:hover .intro__libelle, .intro:not(.is-lance) .intro__rec:focus-visible .intro__libelle {
+  letter-spacing: 0.22em;
 }
 .intro__rec:focus-visible {
   outline: 2px solid var(--color-neutre);
@@ -1049,7 +1056,7 @@ button:focus-visible {
   font-size: 8.5px;
   text-transform: uppercase;
   opacity: 0.75;
-  transition: opacity 0.4s ease;
+  transition: opacity 0.4s ease, scale 0.6s cubic-bezier(0.19, 1, 0.22, 1);
   animation: video-anneau 14s linear infinite;
 }
 
@@ -1076,6 +1083,7 @@ button:focus-visible {
   font-weight: 700;
   font-size: clamp(0.88rem, 0.42vw + 0.75rem, 1.13rem);
   letter-spacing: 0.1em;
+  transition: letter-spacing 0.5s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .intro__enregistrement {
@@ -2123,6 +2131,8 @@ button:focus-visible {
   }
 }
 .logiciels .card {
+  position: relative;
+  isolation: isolate;
   background-color: var(--color-surface);
   width: 158px;
   height: 196px;
@@ -2142,12 +2152,16 @@ button:focus-visible {
   align-items: center;
   text-align: center;
 }
-.logiciels .card:hover {
-  background-color: var(--color-red);
-  transition: all 0.3s ease;
-}
-.logiciels .card:hover p {
-  color: var(--color-bg-primary);
+.logiciels .card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background: radial-gradient(120% 90% at 50% 115%, rgba(201, 67, 43, 0.45), transparent 65%);
+  box-shadow: 0 0 0 1px var(--color-red), 0 14px 40px -6px rgba(201, 67, 43, 0.6);
+  opacity: 0;
+  transition: opacity 0.45s cubic-bezier(0.19, 1, 0.22, 1);
 }
 .logiciels .card img {
   width: 110px;
@@ -2155,6 +2169,7 @@ button:focus-visible {
   -o-object-fit: contain;
      object-fit: contain;
   margin-bottom: 12px;
+  transition: scale 0.6s cubic-bezier(0.19, 1, 0.22, 1), translate 0.6s cubic-bezier(0.19, 1, 0.22, 1), filter 0.5s ease;
 }
 @media (max-width: 768px) {
   .logiciels .card img {
@@ -2162,6 +2177,23 @@ button:focus-visible {
     height: 56px;
     margin-bottom: 10px;
   }
+}
+.logiciels .card p {
+  transition: color 0.3s ease;
+}
+.logiciels .card:hover::before {
+  opacity: 1;
+}
+.logiciels .card:hover img {
+  scale: 1.12;
+  translate: 0 -6px;
+  filter: drop-shadow(0 12px 16px rgba(201, 67, 43, 0.45));
+}
+.logiciels .card:hover p:last-child {
+  color: var(--color-red);
+}
+.logiciels .cards:has(.card:hover) .card:not(:hover) img {
+  filter: grayscale(1) brightness(0.6);
 }
 .logiciels .nom {
   font-family: var(--font-primary);
