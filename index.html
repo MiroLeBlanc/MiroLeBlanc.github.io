@@ -39,7 +39,27 @@ intégration multimédia au Cégep Édouard-Montpetit. Développement web et mon
                 document.documentElement.classList.add('clap-ferme');
                 document.documentElement.style.setProperty('--clap-titre', JSON.stringify(clap.titre));
                 document.documentElement.style.setProperty('--clap-scene', JSON.stringify(clap.scene));
+
+                // texte de l'ardoise caché tant que les polices ne sont pas prêtes (sinon il saute de police)
+                if (document.fonts) {
+                    var polices = function() {
+                        document.documentElement.classList.remove('clap-polices');
+                    };
+                    document.documentElement.classList.add('clap-polices');
+                    Promise.all([
+                        document.fonts.load('700 1em Oswald', clap.titre),
+                        document.fonts.load('700 1em "Space Mono"', clap.scene),
+                    ]).then(polices, polices);
+                    setTimeout(polices, 1000);
+                }
             }
+
+            // intro d'ouverture : une fois par visite, seulement si on arrive directement sur l'accueil
+            var animations = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            if (!sessionStorage.getItem('visite') && !location.hash && animations) {
+                document.documentElement.classList.add('intro-ouverte', 'intro-attente');
+            }
+            sessionStorage.setItem('visite', '1');
         } catch (e) {}
     </script>
 </head>
@@ -105,6 +125,74 @@ intégration multimédia au Cégep Édouard-Montpetit. Développement web et mon
             </ul>
         </nav>
     </header>
+
+    <div class="intro" data-component="Intro" role="dialog" aria-modal="true" aria-labelledby="intro-titre">
+        <canvas class="intro__objectif js-objectif" aria-hidden="true"></canvas>
+        <div class="intro__voile js-voile" aria-hidden="true"></div>
+
+        <div class="intro__interface js-interface">
+            <div class="intro__haut js-haut" aria-hidden="true">
+                <p>Cam A<span class="intro__date"> · <span class="js-date">00.00.00</span></span> · <span class="js-heure">00:00:00</span></p>
+                <p class="intro__expo">ISO 800 · 1/50 · f/1.8 · 50mm</p>
+                <p>LUT : <span class="js-lut">Aucune</span><span class="intro__pile"></span></p>
+            </div>
+
+            <div class="intro__cadre js-cadre" aria-hidden="true"></div>
+
+            <div class="intro__centre">
+                <p class="intro__surtitre js-texte" id="intro-titre">// MIRO LEBLANC —&nbsp;PORTFOLIO</p>
+                <button class="intro__rec js-rec" type="button" aria-label="Enregistrer et entrer sur le site">
+                    <svg class="intro__anneau js-texte" viewBox="0 0 120 120" aria-hidden="true">
+                        <defs>
+                            <path id="anneau-intro" d="M60 60m-50 0a50 50 0 1 1 100 0a50 50 0 1 1-100 0" />
+                        </defs>
+                        <text>
+                            <textPath href="#anneau-intro" textLength="312" lengthAdjust="spacing">Appuyer pour tourner · Appuyer pour tourner ·</textPath>
+                        </text>
+                    </svg>
+                    <span class="intro__disque js-disque"><span class="intro__libelle js-texte">REC</span></span>
+                </button>
+                <p class="intro__consigne js-texte" aria-hidden="true">Appuyer sur REC pour entrer</p>
+            </div>
+        </div>
+
+        <div class="intro__enregistrement js-enregistrement" aria-hidden="true"></div>
+
+        <span class="intro__coin intro__coin--hg js-coin" aria-hidden="true"></span>
+        <span class="intro__coin intro__coin--hd js-coin" aria-hidden="true"></span>
+        <span class="intro__coin intro__coin--bg js-coin" aria-hidden="true"></span>
+        <span class="intro__coin intro__coin--bd js-coin" aria-hidden="true"></span>
+
+        <div class="intro__bas js-bas" aria-hidden="true">
+            <p class="timecode" data-component="Timecode" data-attente>00:00:00</p>
+            <div class="scroller">
+                <svg class="icon">
+                    <use href="#icon-fleche"></use>
+                </svg>
+                <p>SCROLLER</p>
+                <svg class="icon">
+                    <use href="#icon-fleche"></use>
+                </svg>
+            </div>
+            <p class="rec is-standby js-etat">STBY 1080p</p>
+        </div>
+
+        <div class="intro__flash js-flash" aria-hidden="true"></div>
+
+        <div class="intro__allumage" aria-hidden="true">
+            <span class="intro__volet js-volet"></span>
+            <span class="intro__volet intro__volet--bas js-volet"></span>
+            <span class="intro__trait js-trait"></span>
+        </div>
+
+        <div class="intro__journal js-journal" aria-hidden="true">
+            <p class="js-entree"><span>Caméra</span><i></i><span>Cam A · Miro Leblanc</span></p>
+            <p class="js-entree"><span>Capteur</span><i></i><span>1080p · 24 i/s</span></p>
+            <p class="js-entree"><span>Objectif</span><i></i><span>50mm f/1.8</span></p>
+            <p class="js-entree"><span>Profil</span><i></i><span>Log</span></p>
+            <p class="js-entree"><span>Signal vidéo</span><i></i><span class="intro__signal js-signal">···</span></p>
+        </div>
+    </div>
 
     <section class="hub">
         <div class="hub__media">

@@ -39,7 +39,22 @@ complet d'une invention fictive, administrable avec des types de contenus person
                 document.documentElement.classList.add('clap-ferme');
                 document.documentElement.style.setProperty('--clap-titre', JSON.stringify(clap.titre));
                 document.documentElement.style.setProperty('--clap-scene', JSON.stringify(clap.scene));
+
+                // texte de l'ardoise caché tant que les polices ne sont pas prêtes (sinon il saute de police)
+                if (document.fonts) {
+                    var polices = function() {
+                        document.documentElement.classList.remove('clap-polices');
+                    };
+                    document.documentElement.classList.add('clap-polices');
+                    Promise.all([
+                        document.fonts.load('700 1em Oswald', clap.titre),
+                        document.fonts.load('700 1em "Space Mono"', clap.scene),
+                    ]).then(polices, polices);
+                    setTimeout(polices, 1000);
+                }
             }
+
+            sessionStorage.setItem('visite', '1');
         } catch (e) {}
     </script>
 </head>
