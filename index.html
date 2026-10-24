@@ -132,7 +132,9 @@ intégration multimédia au Cégep Édouard-Montpetit. Développement web et mon
 
         <div class="intro__interface js-interface">
             <div class="intro__haut js-haut" aria-hidden="true">
-                <p>Cam A<span class="intro__date"> · <span class="js-date">00.00.00</span></span> · <span class="js-heure">00:00:00</span></p>
+                <p>
+                    Cam A<span class="intro__date"> · <span class="js-date">00.00.00</span></span> · <span class="js-heure">00:00:00</span>
+                </p>
                 <p class="intro__expo">ISO 800 · 1/50 · f/1.8 · 50mm</p>
                 <p>LUT : <span class="js-lut">Aucune</span><span class="intro__pile"></span></p>
             </div>
@@ -248,11 +250,11 @@ intégration multimédia au Cégep Édouard-Montpetit. Développement web et mon
 
                     <div class="droite">
                         <p data-scrolly="fondu">
-                            <span>Développeur web</span> et <span>monteur vidéo</span>, avec un vrai bagage en <span>vente</span>.<br />Je construis des choses qui
-                            fonctionnent, qui racontent quelque chose, et qui finissent par convaincre — pas juste par bien paraître.
+                            <span>Développeur web</span> et <span>monteur vidéo</span>, avec un vrai bagage en <span>vente</span>.<br />Je réalise des projets qui
+                            fonctionnent, qui racontent quelque chose, et qui finissent par convaincre — pas seulement pour l'esthétique.
                         </p>
 
-                        <div class="video" data-component="YouTube" data-scrolly="ecran" data-video-id="ZZvbhgxUuc4">
+                        <div class="video" data-component="YouTube" data-scrolly="ecran" data-video-id="hYIy2LzdmVY">
                             <div class="js-video"></div>
                             <button class="video__lancer js-lancer" type="button" aria-label="Lire la vidéo : Vidéo de présentation (52 secondes)">
                                 <img class="video__miniature" src="assets/images/miniature-presentation.webp" alt="" loading="lazy" decoding="async" />
@@ -266,7 +268,9 @@ intégration multimédia au Cégep Édouard-Montpetit. Développement web et mon
                                             <path id="anneau-video" d="M60 60m-50 0a50 50 0 1 1 100 0a50 50 0 1 1-100 0" />
                                         </defs>
                                         <text>
-                                            <textPath href="#anneau-video" textLength="312" lengthAdjust="spacing">Appuyer pour lire · Appuyer pour lire ·</textPath>
+                                            <textPath href="#anneau-video" textLength="312" lengthAdjust="spacing">
+                                                Appuyer pour lire · Appuyer pour lire ·
+                                            </textPath>
                                         </text>
                                     </svg>
                                     <span class="video__disque"><span class="video__triangle"></span></span>
@@ -453,6 +457,15 @@ intégration multimédia au Cégep Édouard-Montpetit. Développement web et mon
             <canvas class="projets__grille" data-component="GridScan"></canvas>
             <div class="wrapper">
                 <h3 data-scrolly="titre">Projets</h3>
+                <p class="projets__aide js-aide" aria-hidden="true">
+                    <svg class="icon">
+                        <use href="#icon-fleche"></use>
+                    </svg>
+                    Scroller pour voir les projets
+                    <svg class="icon">
+                        <use href="#icon-fleche"></use>
+                    </svg>
+                </p>
                 <div class="projets__scene" data-component="ChargementVideos">
                     <a href="fiche1.html" class="card js-card">
                         <div class="card__media">
