@@ -3158,6 +3158,7 @@ button:focus-visible {
   height: 32px;
 }
 .footer .droite .mentionia {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -3167,6 +3168,16 @@ button:focus-visible {
 .footer .droite .mentionia .icon {
   width: 22px;
   height: 22px;
+}
+.footer .droite .mentionia__rouge {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--color-red);
+  clip-path: inset(0 100% 0 0);
+  pointer-events: none;
 }
 .footer .label {
   font-size: 16px;
@@ -5226,6 +5237,20 @@ button:focus-visible {
     opacity: 1;
     translate: 0 0;
     filter: blur(0);
+  }
+  .has-js [data-scrolly=contact].is-active .mentionia__rouge {
+    animation: scrolly-ia 1.6s cubic-bezier(0.77, 0, 0.175, 1) 0.4s;
+  }
+}
+@keyframes scrolly-ia {
+  0% {
+    clip-path: inset(0 100% 0 0);
+  }
+  45%, 55% {
+    clip-path: inset(0 0 0 0);
+  }
+  100% {
+    clip-path: inset(0 0 0 100%);
   }
 }
 @keyframes scrolly-tampon {

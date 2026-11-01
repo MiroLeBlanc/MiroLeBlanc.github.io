@@ -9,8 +9,10 @@
 intégration multimédia au Cégep Édouard-Montpetit. Développement web et montage vidéo, à la recherche d'un stage." />
     <meta name="theme-color" content="#0E0B0A" />
 
-    <link rel="icon" type="image/png" sizes="256x256" href="assets/icons/favicon.png" />
-    <link rel="icon" type="image/svg+xml" href="assets/icons/logo.svg" />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="256x256" href="assets/favicon/favicon-256.png" />
+    <link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png" />
 
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="fr_CA" />
@@ -119,7 +121,7 @@ intégration multimédia au Cégep Édouard-Montpetit. Développement web et mon
                 <li class="nav__item nav__item__icon"><a href="https://github.com/MiroLeBlanc" class="nav__link" target="_blank" rel="noopener"><span class="nav__label">GitHub</span><svg class="icon">
                             <use href="#icon-github"></use>
                         </svg></a></li>
-                <li class="nav__item nav__item__icon"><a href="#" class="nav__link" target="_blank" rel="noopener"><span class="nav__label">Curriculum vitae</span><svg class="icon">
+                <li class="nav__item nav__item__icon"><a href="assets/cv/CV_Miro_Leblanc.pdf" class="nav__link" target="_blank" rel="noopener"><span class="nav__label">Curriculum vitae</span><svg class="icon">
                             <use href="#icon-cv"></use>
                         </svg></a></li>
             </ul>
@@ -583,8 +585,7 @@ intégration multimédia au Cégep Édouard-Montpetit. Développement web et mon
             <div class="gauche">
                 <h2><span>Prêt à</span><br /><span>créer</span></h2>
                 <div class="boutons">
-                    <!-- TODO : lien vers le CV (PDF) -->
-                    <a href="#" class="bouton bouton--plein">Télécharger le CV</a>
+                    <a href="assets/cv/CV_Miro_Leblanc.pdf" class="bouton bouton--plein" download>Télécharger le CV</a>
                     <a href="mailto:miroleblanc@gmail.com" class="bouton bouton--sombre">M'écrire</a>
                 </div>
             </div>
@@ -619,6 +620,12 @@ intégration multimédia au Cégep Édouard-Montpetit. Développement web et mon
                             <use href="#icon-ia"></use>
                         </svg>
                         Déclaration IA
+                        <span class="mentionia__rouge" aria-hidden="true">
+                            <svg class="icon">
+                                <use href="#icon-ia"></use>
+                            </svg>
+                            Déclaration IA
+                        </span>
                     </a>
                 </li>
             </ul>

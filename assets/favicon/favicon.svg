@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- tuile sombre comme le logo du header : lisible sur un onglet clair comme foncé -->
+  <rect width="64" height="64" rx="10" fill="#0E0B0A"/>
+  <svg x="1" y="2" width="62" height="60" viewBox="104 244 1366 624">
+    <g fill="#F2E9DD">
+      <path d="M104 772 249 641 474 482 250 594 458 334 590 334 591 494 942 304 724 700 486 868 673 541 479 669 479 503 281 772Z"/>
+      <path d="M1007 249 1182 244 919 665 1470 665 1306 770 726 770 891 621 762 685Z"/>
+    </g>
+  </svg>
+</svg>
